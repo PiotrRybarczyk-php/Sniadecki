@@ -13,12 +13,13 @@ window.onload = function () {
     element = document.getElementsByClassName("qanim");
     //get all needed data
     for (i; i < element.length; i++) {
+        element[i].style.opacity = "0.0";
         animid[i] = element[i].id;
-        animposition[i] = element[i].getBoundingClientRect().top + window.scrollY - (element[i].offsetHeight - 100);
-        animoffset[i] = animposition[i] + element[i].offsetHeight;
+        animposition[i] = (element[i].getBoundingClientRect().top + window.scrollY)-600;
+        animoffset[i] = animposition[i] + (element[i].offsetHeight+300);
         animcheck[i] = false;
         animcounter[i] = 0;
-        console.log(animoffset[i]);
+        console.log(animposition[i]);
     }
     i = 0;
 
