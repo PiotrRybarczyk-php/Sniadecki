@@ -3,6 +3,7 @@ html {
 }
 body {
   font-family: Montserrat;
+  overflow-x: hidden;
 }
 :root {
   --c2: 50%;
@@ -43,7 +44,7 @@ body {
 }
 
 .box_normal {
-  width: 100vw;
+  width: 100%;
   display: block;
 }
 
@@ -62,21 +63,21 @@ body {
 }
 
 .box_scroll {
-  width: 100vw;
+  width: 100%;
   display: block;
   overflow-y: scroll;
   max-height: 600px;
 }
 
 .box_hidden {
-  width: 100vw;
+  width: 100%;
   display: block;
   overflow-y: hidden;
   max-height: 600px;
 }
 
 .box_center {
-  width: 100vw;
+  width: 100%;
   min-height: 160px;
   display: flex;
   position: relative;
@@ -87,12 +88,12 @@ body {
 .item_product {
   width: inherit;
   position: relative;
-  height: 661px;
+  min-height: 661px;
+  height: 100%;
   border-radius: 25px;
   background-size: cover !important;
 }
 .content_product {
-  position: absolute;
   display: grid;
   grid-template-columns: 100%;
   width: inherit;
@@ -116,11 +117,11 @@ body {
 .item_opinion {
   width: inherit;
   position: relative;
-  height: 661px;
+  min-height: 620px;
+  height: 100%;
   background-size: cover !important;
 }
 .content_opinion {
-  position: absolute;
   display: grid;
   grid-template-columns: 100%;
   width: inherit;
@@ -388,7 +389,7 @@ body {
   justify-content: center;
 }
 .flex_right {
-  justify-content: center;
+  justify-content: flex-end;
 }
 .circle {
   position: absolute;
