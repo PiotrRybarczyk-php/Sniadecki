@@ -2,6 +2,16 @@
   body {
     color: white;
   }
+
+  .scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+  }
 </style>
 
 <body>
@@ -46,10 +56,9 @@
     });
   </script>
   <?php
-  $temp_pages = array("Oferta", "Katalog", "Certyfikaty", "Kontakt");
   ?>
   <header>
-    <nav id="navbar" class="autohide main-header__navbar navbar navbar-expand-lg navbar-light flex-column" id="navbar">
+    <nav id="navbar" class="autohide main-header__navbar navbar navbar-expand-lg navbar-light flex-column mobile_border" id="navbar">
       <div class="row" style="width:100vw;min-height:150px;align-items:center;">
         <div class="col-lg-3"><a class="navbar-brand" href="<?= base_url(); ?>">
             <img class="nav_logo" src="<?= base_url('assets/front/img/logoJS.png'); ?>" alt="logo ad awards">
@@ -63,7 +72,7 @@
             <ul class="navbar-nav">
               <?php for ($key = 0; $key < 4; $key++) :  $current = $subpages[$key]->page; ?>
                 <li class="main-header__nav-item nav-item page_list">
-                  <a class=" <?= ($this->uri->segment(1) == $current ? 'highlight' : 'nav-link'); ?>  py-2" href="<?= base_url(); ?><?= $subpages[$key]->page; ?>"><?= $temp_pages[$key]; ?></a>
+                  <a class=" <?= ($this->uri->segment(1) == $current ? 'highlight' : 'nav-link'); ?>  py-2" href="<?= base_url(); ?><?= $subpages[$key]->page; ?>"><?= $subpages[$key]->title; ?></a>
                 </li>
               <?php endfor; ?>
               <li class="main-header__nav-item nav-item mx-5" style="color:white"> </li>

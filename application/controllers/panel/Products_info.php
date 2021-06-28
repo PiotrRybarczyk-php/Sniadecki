@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Logos extends CI_Controller
+class Products_info extends CI_Controller
 {
 
 	public function index()
@@ -67,6 +67,17 @@ class Logos extends CI_Controller
 						addMedia($data);
 					} elseif ($value == 'usunięte') {
 						$insert['photo'] = '';
+					}
+				} else if ($key == 'name_photo_2') {
+					if ($this->upload->do_upload('photo_2')) {
+						$data = $this->upload->data();
+						$insert['photo2'] = $now . '/' . $data['file_name'];
+						if ($data['image_width'] > 1440) {
+							resizeImg($data['file_name'], $now, '1440');
+						}
+						addMedia($data);
+					} elseif ($value == 'usunięte') {
+						$insert['photo2'] = '';
 					}
 				} else if ($key == 'server_photo_1') {
 					if ($value != '') {

@@ -1,19 +1,19 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Hereweare extends CI_Controller
+class Info_3 extends CI_Controller
 {
 
 	public function index()
 	{
 		if (checkAccess($access_group = ['administrator', 'redaktor'], $_SESSION['rola'])) {
-			if (!$this->db->table_exists($this->uri->segment(2))) {
-				$this->base_m->create_table($this->uri->segment(2));
+			if (!$this->db->table_exists('info')) {
+				$this->base_m->create_table('info');
 			}
 			// DEFAULT DATA
 			$data = loadDefaultData();
 
-			$data['rows'] = $this->back_m->get_all($this->uri->segment(2));
+			$data['rows'] = $this->back_m->get_one('info', 3);
 			echo loadSubViewsBack($this->uri->segment(2), 'index', $data);
 		} else {
 			redirect('panel');
@@ -27,7 +27,7 @@ class Hereweare extends CI_Controller
 			$data = loadDefaultData();
 
 			if ($id != '') {
-				$data['value'] = $this->back_m->get_one($this->uri->segment(2), $id);
+				$data['value'] = $this->back_m->get_one('info', $id);
 			}
 			echo loadSubViewsBack($this->uri->segment(2), $type, $data);
 		} else {
@@ -63,6 +63,7 @@ class Hereweare extends CI_Controller
 						if ($data['image_width'] > 1440) {
 							resizeImg($data['file_name'], $now, '1440');
 						}
+
 						addMedia($data);
 					} elseif ($value == 'usunięte') {
 						$insert['photo'] = '';
@@ -92,7 +93,7 @@ class Hereweare extends CI_Controller
 				$this->back_m->update($table, $insert, $id);
 				$this->session->set_flashdata('flashdata', 'Rekord został zaktualizowany!');
 			}
-			redirect('panel/' . $table);
+			redirect('panel/' . 'info_3');
 		} else {
 			redirect('panel');
 		}

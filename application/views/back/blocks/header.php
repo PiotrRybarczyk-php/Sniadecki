@@ -32,15 +32,30 @@
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
     <ul class="br-menu-sub nav flex-column">
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/atributes" class="nav-link <?php if ($this->uri->segment(2) == 'atributes' || $this->uri->segment(3) == 'atributes') {
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/slider" class="nav-link <?php if ($this->uri->segment(2) == 'slider' || $this->uri->segment(3) == 'slider') {
+                                                                                              echo 'active';
+                                                                                            } ?>">Slajder</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info_3" class="nav-link <?php if ($this->uri->segment(2) == 'info_3' || $this->uri->segment(3) == 'info_3') {
+                                                                                              echo 'active';
+                                                                                            } ?>">Sekcja 1</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info_1" class="nav-link <?php if ($this->uri->segment(2) == 'info_1' || $this->uri->segment(3) == 'info_1') {
+                                                                                              echo 'active';
+                                                                                            } ?>">Sekcja 2</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info_2" class="nav-link <?php if ($this->uri->segment(2) == 'info_2' || $this->uri->segment(3) == 'info_2') {
+                                                                                              echo 'active';
+                                                                                            } ?>">Sekcja 3</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/info_4" class="nav-link <?php if ($this->uri->segment(2) == 'info_4' || $this->uri->segment(3) == 'info_4') {
+                                                                                              echo 'active';
+                                                                                            } ?>">Sekcja 4</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/products_page" class="nav-link <?php if ($this->uri->segment(2) == 'products_page' || $this->uri->segment(3) == 'products_page') {
+                                                                                                    echo 'active';
+                                                                                                  } ?>">Produkty</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/products_info" class="nav-link <?php if ($this->uri->segment(2) == 'products_info' || $this->uri->segment(3) == 'products_info') {
+                                                                                                    echo 'active';
+                                                                                                  } ?>">Kafle Produktów</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/opinions" class="nav-link <?php if ($this->uri->segment(2) == 'opinions' || $this->uri->segment(3) == 'opinions') {
                                                                                                 echo 'active';
-                                                                                              } ?>">Opisy</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/" class="nav-link <?php if ($this->uri->segment(2) == '' || $this->uri->segment(3) == 'x') {
-                                                                                        echo 'active';
-                                                                                      } ?>">Placeholder</a></li>
-      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/" class="nav-link <?php if ($this->uri->segment(2) == '' || $this->uri->segment(3) == 'x') {
-                                                                                        echo 'active';
-                                                                                      } ?>">Placeholder</a></li>
+                                                                                              } ?>">Opinie</a></li>
     </ul>
     <a href="<?php echo base_url(); ?>panel/blog" class="br-menu-link
         <?php if ($this->uri->segment(2) == 'blog') {
@@ -48,16 +63,7 @@
         } ?>">
       <div class="br-menu-item">
         <i class="menu-item-icon icon fas fa-blog tx-20"></i>
-        <span class="menu-item-label">Blog</span>
-      </div><!-- menu-item -->
-    </a><!-- br-menu-link -->
-    <a href="<?php echo base_url(); ?>panel/slider" class="br-menu-link
-        <?php if ($this->uri->segment(2) == 'slider') {
-          echo 'active';
-        } ?>">
-      <div class="br-menu-item">
-        <i class="menu-item-icon icon far fa-images tx-20"></i>
-        <span class="menu-item-label">Slider</span>
+        <span class="menu-item-label">Poradnik</span>
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
     <a href="<?php echo base_url(); ?>panel/mails" class="br-menu-link

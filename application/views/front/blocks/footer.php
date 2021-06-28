@@ -1,6 +1,41 @@
-<footer id="footer" class="main-footer mt-5 pt-0 pb-0" style="overflow:hidden;">
-  <div class="container" style="max-width:100%;">
-
+<footer id="footer" class="main-footer mt-5 pt-0 pb-0" style="overflow:hidden;background-color: #2e3972;">
+  <div class="item_container main_padding">
+    <div class="myrow"><img class="nav_logo" src="<?= base_url('assets/front/img/logoJS.png'); ?>" alt="logo ad awards"></div>
+    <div class="grid-12 small_padding gtab-4">
+      <div class="grid-1 size-5 tab_size-2">
+        <p class="text_footer" style="font-weight:700;">PPH im. Jędrzeja Śniadeckiego</p>
+        <p class="text_footer" style="font-weight:700;">Sp. z o.o.</p>
+        <p class="text_footer">87-100 Toruń</p>
+        <p class="text_footer">ul. Polna 115</p>
+        <p></p>
+        <p class="text_footer">tel.: <a class="link" href="tel:333333333">215367218</a></p>
+      </div>
+      <div class="grid-1 size-4 tab_size-2">
+        <p class="text_footer" style="font-weight:700;">Ważne Informacje</p>
+        <p class="text_footer line_unset"><a class="link" href="">Polityka Prywatności RODO</a></p>
+        <p class="text_footer line_unset"><a class="link" href="">Kontakt</a></p>
+      </div>
+      <div class="grid-1 size-2">
+        <p class="text_footer line_unset"><a class="link" href="">Oferta</a></p>
+        <p class="text_footer line_unset"><a class="link" href="">Katalog</a></p>
+        <p class="text_footer line_unset"><a class="link" href="">Poradnik</a></p>
+      </div>
+      <div class="grid-1" style="max-height: 70px;width:145px;">
+        <p class="text_footer" style="text-align:center">Nasze media:</p>
+        <p style="text-align:center;font-size:40px;"><a class="link" href=""><i class="fab fa-facebook-square"></i></a></p>
+      </div>
+    </div>
+  </div>
+  <hr style="border-color:white;opacity:0.4;">
+  <div class="item_container main_padding">
+    <div class="grid-2">
+      <div class="myrow">
+        <p class="text_footer line_unset" style="font-weight:500;">Copyright by PPH im. Jędrzeja Śniadeckiego Sp. z o.o.</p>
+      </div>
+      <div class="myrow flex_right">
+        <p class="text_footer line_unset" style="font-weight:500;">Created with love by Adawards</p>
+      </div>
+    </div>
   </div>
 </footer>
 
@@ -72,8 +107,8 @@
     window.cookieconsent.initialise({
       "palette": {
         "popup": {
-          "background": "<?= $settings->first_color ?>",
-          "text": "#fff"
+          "background": "<?= $settings->second_color ?>",
+          "text": "#000"
         },
         "button": {
           "background": "#eee",

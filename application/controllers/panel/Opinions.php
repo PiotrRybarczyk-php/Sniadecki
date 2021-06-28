@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Offline_Offer extends CI_Controller
+class Opinions extends CI_Controller
 {
 
 	public function index()
@@ -63,7 +63,6 @@ class Offline_Offer extends CI_Controller
 						if ($data['image_width'] > 1440) {
 							resizeImg($data['file_name'], $now, '1440');
 						}
-
 
 						addMedia($data);
 					} elseif ($value == 'usunięte') {

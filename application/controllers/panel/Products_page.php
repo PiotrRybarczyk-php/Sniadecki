@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Slider extends CI_Controller
+class Products_page extends CI_Controller
 {
 
 	public function index()
@@ -60,6 +60,10 @@ class Slider extends CI_Controller
 					if ($this->upload->do_upload('photo_1')) {
 						$data = $this->upload->data();
 						$insert['photo'] = $now . '/' . $data['file_name'];
+						if ($data['image_width'] > 1440) {
+							resizeImg($data['file_name'], $now, '1440');
+						}
+
 						addMedia($data);
 					} elseif ($value == 'usunięte') {
 						$insert['photo'] = '';
@@ -82,7 +86,6 @@ class Slider extends CI_Controller
 					$insert[$key] = $value;
 				}
 			}
-
 			if ($type == 'insert') {
 				$this->back_m->insert($table, $insert);
 				$this->session->set_flashdata('flashdata', 'Rekord został dodany!');
