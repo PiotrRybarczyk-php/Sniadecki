@@ -41,7 +41,7 @@
         </ol>
     </div>
 </div>
-<div class="box_center qanim">
+<div class="box_center qa_fade">
     <div class="base_text section_text"><?= $info_3->title; ?></div>
     <span class="section_line"></span>
 </div>
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head2.png'); ?>);">
+            <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head2.jpg'); ?>);">
                 <div class="offer_block"></div>
             </div>
         </div>
@@ -66,14 +66,14 @@
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head4.png'); ?>);">
+            <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head4.jpg'); ?>);">
                 <div class="offer_block"></div>
             </div>
         </div>
     </div>
 </div>
 <div class="myrow flex_center"><a class="blank" href="<?= base_url() . $info_3->title; ?>"><button class="btn_JS"><?= $info_3->button; ?></button></a></div>
-<div class="box_center qanim">
+<div class="box_center qa_fade">
     <div class="base_text section_text"><?= $info_1->title; ?></div>
     <span class="section_line"></span>
 </div>
@@ -83,10 +83,10 @@
 <div class="item_container main_padding">
     <div class="grid-5 gtab-1">
         <div class="item_container size-3 mob_size-1 text_base simple_text">
-            <?= $info_1->description; ?>
+            <?= textlim($info_1->description, 1506); ?>
         </div>
         <div class="item_container_center size-2 mob_size-1">
-            <div style="position:relative;">
+            <div style="position:relative;margin-left:3%;">
                 <img class="img_get_small" src="<?= base_url('uploads/') . $info_1->photo; ?>">
                 <div class="img_overlay"></div>
             </div>
@@ -107,7 +107,7 @@
         </div>
     </div>
 </div>
-<div class="box_center qanim mb-3">
+<div class="box_center qa_fade mb-3">
     <div class="base_text section_text">komu pomagają nasze produkty</div>
     <span class="section_line"></span>
 </div>
@@ -120,12 +120,11 @@
                 <div class="item_container_center small_padding">
                     <div class="item_product" style="background: url('<?= base_url('uploads/') . $item->photo2; ?>');">
                         <div class="content_product" style="background-color:rgba(251, 233, 0,0.92);">
-                            <div class="myrow flex_center label_product"><span class="circle" style="background-color: #2e3972;"><img class="icon_product" src="<?= base_url('uploads/') . $item->photo; ?>"></span></div>
+                            <div class="myrow flex_center label_product qa_fade-left"><span class="circle" style="background-color: #2e3972;"><img class="icon_product" src="<?= base_url('uploads/') . $item->photo; ?>"></span></div>
                             <div class="title_product" style="color:#2e3972">
-                                <p><?= $item->title; ?></p>
-                                <p><?= $item->subtitle; ?></p>
+                                <p class="line_product"><?= $item->title; ?></p>
                             </div>
-                            <div class="myrow text_base simple_text flex_center" style="color:#2e3972;text-align:center;"><?= $item->description; ?></div>
+                            <div class="myrow text_base simple_text flex_center" style="color:#2e3972;text-align:center;"><?= textlim($item->description, 300); ?></div>
                         </div>
                     </div>
                 </div>
@@ -133,12 +132,11 @@
                 <div class="item_container_center small_padding ">
                     <div class="item_product " style="background: url('<?= base_url('uploads/') . $item->photo2; ?>');">
                         <div class="content_product" style="background-color:rgba(46, 57, 114,0.92);">
-                            <div class="myrow flex_center label_product"><span class="circle" style="background-color: #fbe900;"><img class="icon_product" src="<?= base_url('uploads/') . $item->photo; ?>"></span></div>
+                            <div class="myrow flex_center label_product qa_fade-right"><span class="circle" style="background-color: #fbe900;"><img class="icon_product" src="<?= base_url('uploads/') . $item->photo; ?>"></span></div>
                             <div class="title_product" style="color:#fbe900">
-                                <p><?= $item->title; ?></p>
-                                <p><?= $item->subtitle; ?></p>
+                                <p class="line_product"><?= $item->title; ?></p>
                             </div>
-                            <div class="myrow text_base simple_text flex_center" style="color:#fbe900;text-align:center;"><?= $item->description; ?></div>
+                            <div class="myrow text_base simple_text flex_center" style="color:#fbe900;text-align:center;"><?= textlim($item->description, 300); ?></div>
                         </div>
                     </div>
                 </div>
@@ -147,14 +145,14 @@
     </div>
     <div class="myrow flex_center my-5"><a class="blank" href="#"><button class="btn_JS">Zobacz Katalog</button></a></div>
 </div>
-<div class="box_center qanim">
+<div class="box_center qa_fade">
     <div class="base_text section_text"><?= $info_2->title; ?></div>
     <span class="section_line"></span>
 </div>
 <div class="item_container main_padding" style="color:black;">
     <div class="grid-5 gmob-1">
         <div class="grid-1 size-3 small_padding ">
-            <div class="myrow text_base simple_text" style="max-width:905px;"><?= $info_2->description; ?></div>
+            <div class="myrow text_base simple_text" style="max-width:905px;"><?= textlim($info_2->description, 1006); ?></div>
             <div class="item_container_align"><a class="blank" href="<?= base_url() . $info_2->link; ?>"><button class="btn_JS"><?= $info_2->button; ?></button></a></div>
         </div>
         <div class="item_container_center size-2 small_padding ">
@@ -165,75 +163,60 @@
         </div>
     </div>
 </div>
-<div class="box_center qanim">
+<div class="box_center qa_fade">
     <div class="base_text section_text">opinie klientów</div>
     <span class="section_line"></span>
 </div>
 <div class="item_container main_padding">
     <div class="grid-4 gtab-2 gmob-1">
-        <div class="item_container_center small_padding mob_space">
-            <div class="item_opinion " style="background: url('<?= base_url('assets/front/img/welder.png'); ?>');">
-                <div class="content_opinion" style="background-color:rgba(46, 57, 114,0.92);">
-                    <div class="myrow flex_center label_opinion" style="padding-top:3vw;"><img class="icon_opinion" src="<?= base_url('assets/front/img/thumb_y.svg'); ?>"></div>
-                    <div class="myrow text_base tiny_text flex_center" style="text-align:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae tellus ut neque egestas auctor sit amet non urna. Vivamus tempor imperdiet massa a dapibus. Donec ut elementum velit. Mauris et tincidunt magna. Suspendisse tincidunt augue sit amet augue pellentesque efficitur. Proin vel vestibulum sem, sed maximus justo. Aenean elit neque, vestibulum quis metus in, dapibus ultricies tellus. Proin a libero augue. Proin sed diam suscipit, lacinia mi id, tincidunt nulla. Praesent volutpat.</div>
-                    <div class="myrow flex_right label_opinion text_base pr-4">Lore Ipsum Info</div>
+        <?php $it = 0;
+        foreach ($opinions as $item) : ?>
+            <?php $it++; ?>
+            <?php if ($it % 2 != 0) : ?>
+                <div class="item_container_center small_padding mob_space qa_fade-up">
+                    <div class="item_opinion " style="background: url('<?= base_url('uploads/') . $item->photo; ?>');">
+                        <div class="content_opinion" style="background-color:rgba(46, 57, 114,0.92);">
+                            <div class="myrow flex_center label_opinion" style="padding-top:3vw;"><img class="icon_opinion" src="<?= base_url('assets/front/img/thumb_y.svg'); ?>"></div>
+                            <div class="myrow text_base tiny_text flex_center" style="text-align:center;"><?= textlim($item->description, 500); ?></div>
+                            <div class="myrow flex_right label_opinion text_base pr-4"><?= $item->title; ?></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="item_container_center small_padding mob_space">
-            <div class="item_opinion " style="background: url('<?= base_url('assets/front/img/welder.png'); ?>');">
-                <div class="content_opinion" style="background-color:rgba(251, 233, 0,0.92);">
-                    <div class="myrow flex_center label_opinion" style="padding-top:3vw;"><img class="icon_opinion" src="<?= base_url('assets/front/img/thumb_b.svg'); ?>"></div>
-                    <div class="myrow text_base tiny_text flex_center" style="color:black;text-align:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae tellus ut neque egestas auctor sit amet non urna. Vivamus tempor imperdiet massa a dapibus. Donec ut elementum velit. Mauris et tincidunt magna. Suspendisse tincidunt augue sit amet augue pellentesque efficitur. Proin vel vestibulum sem, sed maximus justo. Aenean elit neque, vestibulum quis metus in, dapibus ultricies tellus. Proin a libero augue. Proin sed diam suscipit, lacinia mi id, tincidunt nulla. Praesent volutpat.</div>
-                    <div class="myrow flex_right label_opinion text_base pr-4" style="color:black;">Lore Ipsum Info</div>
+            <?php else : ?>
+                <div class="item_container_center small_padding mob_space qa_fade-down">
+                    <div class="item_opinion" style="background: url('<?= base_url('uploads/') . $item->photo; ?>');">
+                        <div class="content_opinion" style="background-color:rgba(251, 233, 0,0.92);">
+                            <div class="myrow flex_center label_opinion" style="padding-top:3vw;"><img class="icon_opinion" src="<?= base_url('assets/front/img/thumb_b.svg'); ?>"></div>
+                            <div class="myrow text_base tiny_text flex_center" style="color:black;text-align:center;"><?= textlim($item->description, 500); ?></div>
+                            <div class="myrow flex_right label_opinion text_base pr-4" style="color:black;"><?= $item->title; ?></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="item_container_center small_padding mob_space">
-            <div class="item_opinion " style="background: url('<?= base_url('assets/front/img/welder.png'); ?>');">
-                <div class="content_opinion" style="background-color:rgba(46, 57, 114,0.92);">
-                    <div class="myrow flex_center label_opinion" style="padding-top:3vw;"><img class="icon_opinion" src="<?= base_url('assets/front/img/thumb_y.svg'); ?>"></div>
-                    <div class="myrow text_base tiny_text flex_center" style="text-align:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae tellus ut neque egestas auctor sit amet non urna. Vivamus tempor imperdiet massa a dapibus. Donec ut elementum velit. Mauris et tincidunt magna. Suspendisse tincidunt augue sit amet augue pellentesque efficitur. Proin vel vestibulum sem, sed maximus justo. Aenean elit neque, vestibulum quis metus in, dapibus ultricies tellus. Proin a libero augue. Proin sed diam suscipit, lacinia mi id, tincidunt nulla. Praesent volutpat.</div>
-                    <div class="myrow flex_right label_opinion text_base pr-4">Lore Ipsum Info</div>
-                </div>
-            </div>
-        </div>
-        <div class="item_container_center small_padding mob_space">
-            <div class="item_opinion " style="background: url('<?= base_url('assets/front/img/welder.png'); ?>');">
-                <div class="content_opinion" style="background-color:rgba(251, 233, 0,0.92);">
-                    <div class="myrow flex_center label_opinion" style="padding-top:3vw;"><img class="icon_opinion" src="<?= base_url('assets/front/img/thumb_b.svg'); ?>"></div>
-                    <div class="myrow text_base tiny_text flex_center" style="color:black;text-align:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae tellus ut neque egestas auctor sit amet non urna. Vivamus tempor imperdiet massa a dapibus. Donec ut elementum velit. Mauris et tincidunt magna. Suspendisse tincidunt augue sit amet augue pellentesque efficitur. Proin vel vestibulum sem, sed maximus justo. Aenean elit neque, vestibulum quis metus in, dapibus ultricies tellus. Proin a libero augue. Proin sed diam suscipit, lacinia mi id, tincidunt nulla. Praesent volutpat.</div>
-                    <div class="myrow flex_right label_opinion text_base pr-4" style="color:black;">Lore Ipsum Info</div>
-                </div>
-            </div>
-        </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </div>
 </div>
-<div class="box_center qanim">
-    <div class="base_text section_text">Poradnik</div>
+<div class="box_center qa_fade">
+    <div class="base_text section_text"><?= $info_4->title; ?></div>
     <span class="section_line"></span>
 </div>
 <div class="box_center  main_padding text_base simple_text mb-5">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, mauris vitae lobortis aliquet,
-    augue elit molestie dui, non laoreet elit justo vel augue. Nulla egestas finibus velit, sit amet sodales turpis. Mauris pretium nibh gravida sapien imperdiet, id tincidunt augue sollicitudin. Suspendisse potenti.
-    In hac habitasse platea dictumst. Aliquam erat volutpat. Sed eleifend et massa sed iaculis. Ut non ante consectetur, hendrerit nibh vitae, porta leo. Donec volutpat lacus a urna euismod lacinia eu vitae nulla. Donec dapibus neque sit amet ex efficitur,
-    at ultricies neque vestibulum. Phasellus sollicitudin urna id dui vestibulum tristique.<br>Nam vitae suscipit dui. Duis ullamcorper malesuada sapien sit amet faucibus.
-    Quisque sagittis, sem quis iaculis malesuada, lacus quam aliquet nisl, sit amet cursus eros turpis at lacus. Etiam varius, mi non mattis consectetur, odio ex rutrum erat, eget pretium eros felis eu purus. Suspendisse id tempus sem, eget porttitor nibh. Sed dapibus nam.
+    <?= textlim($info_4->description, 1006); ?>
 </div>
 <div class="item_container main_padding">
     <div class="grid-2 gtab-1 ">
         <div class="item_container_center flex_right_mob">
             <div style="position:relative;">
-                <img class="img_get_medium" src="<?= base_url('assets/front/img/lab.webp'); ?>">
+                <img class="img_get_medium" src="<?= base_url('uploads/') . $info_4->photo; ?>">
                 <div class="img_overlay"></div>
             </div>
         </div>
         <div class="item_container_align large_padding ">
             <div class="grid-1">
                 <div class="textbox_small">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue vehicula quam at ornare. Sed vestibulum tellus purus, non vehicula tortor tincidunt ut. Suspendisse ultrices orci mauris, eu placerat dolor euismod nec. Nulla facilisi. Donec accumsan augue vel dignissim condimentum. Nunc turpis leo, imperdiet nec lobortis non, congue eget urna. Morbi malesuada tortor in rhoncus lobortis. Proin tempor ipsum eget erat bibendum mattis. Aenean quis rutrum neque. Suspendisse ut aliquet ante est.
+                    <?= textlim($info_4->description_2, 500); ?>
                 </div>
-                <div class="item_container_align mob_force_center"><a class="blank" href="#"><button class="btn_JS">Czytaj Więcej</button></a></div>
+                <div class="item_container_align mob_force_center"><a class="blank" href="<?= base_url() . $info_4->link; ?>"><button class="btn_JS"><?= $info_4->button; ?></button></a></div>
             </div>
         </div>
     </div>

@@ -1,6 +1,14 @@
 <style>
   body {
-    color: white;
+    color: <?= $settings->first_color; ?>;
+  }
+
+  .btn_JS {
+    background-color: <?= $settings->second_color; ?>;
+  }
+
+  .btn_JS:hover {
+    color: <?= $settings->second_color; ?>;
   }
 
   .scrolled-down {

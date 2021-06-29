@@ -110,7 +110,13 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  line-height: 10px;
+  line-height: 18px;
+  width: 96%;
+  margin-left: 0.4vw;
+}
+p.line_product {
+  min-height: 36px;
+  vertical-align: top !important;
 }
 .label_product {
   height: 145px;
@@ -121,6 +127,7 @@ body {
   min-height: 620px;
   height: 100%;
   background-size: cover !important;
+  background-position: center !important;
 }
 .content_opinion {
   display: grid;
@@ -139,6 +146,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   text-align: center;
+  text-transform: uppercase;
 }
 .textbox_small {
   width: 30vw;
@@ -235,6 +243,9 @@ body {
   width: 100%;
   height: 100%;
   min-height: 398px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .forward_content {
@@ -491,7 +502,6 @@ a.blank {
 }
 .btn_JS {
   padding: 23px 69px 23px 69px;
-  background-color: #fbe900;
   text-align: center;
   font-size: 19px;
   font-weight: 700;
@@ -502,7 +512,6 @@ a.blank {
 }
 .btn_JS:hover {
   background-color: black;
-  color: #fbe900;
 }
 .subtitle {
   font-size: 34px;

@@ -23,6 +23,7 @@
   <link href="<?= assets() ?>css/bootstrap.min.css" rel="stylesheet" async>
   <link href="<?= assets() ?>css/mdb.min.css" rel="stylesheet" async>
   <link href="<?= assets() ?>css/style.css" rel="stylesheet" async>
+  <link href="<?= assets() ?>css/qanim.css" rel="stylesheet" async>
   <!-- 
   <link href="<?= assets() ?>css/blocks/header-style.css" rel="stylesheet">
   <link href="<?= assets() ?>css/blocks/about-style.css" rel="stylesheet">

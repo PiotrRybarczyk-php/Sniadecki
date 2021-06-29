@@ -30,10 +30,10 @@
   <div class="item_container main_padding">
     <div class="grid-2">
       <div class="myrow">
-        <p class="text_footer line_unset" style="font-weight:500;">Copyright by PPH im. Jędrzeja Śniadeckiego Sp. z o.o.</p>
+        <p class="text_footer line_unset" style="font-weight:500;word-break:normal;">Copyright by PPH im. Jędrzeja Śniadeckiego Sp. z o.o.</p>
       </div>
       <div class="myrow flex_right">
-        <p class="text_footer line_unset" style="font-weight:500;">Created with love by Adawards</p>
+        <p class="text_footer line_unset" style="font-weight:500;word-break:normal;">Created with love by Adawards</p>
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@
     window.cookieconsent.initialise({
       "palette": {
         "popup": {
-          "background": "<?= $settings->second_color ?>",
+          "background": "<?= $settings->second_color; ?>",
           "text": "#000"
         },
         "button": {

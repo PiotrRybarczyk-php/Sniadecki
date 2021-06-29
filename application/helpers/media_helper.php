@@ -10,7 +10,7 @@ function addMedia($data = '')
 	$media['size'] = $data['file_size'];
 	$media['full_path'] = $data['full_path'];
 	$media['file_path'] = $data['file_path'];
-	if ($data['file_type'] == 'image/jpeg' || $data['file_type'] == 'image/png' || $data['file_type'] == 'image/svg') {
+	if ($data['file_type'] == 'image/jpeg' || $data['file_type'] == 'image/png' || $data['file_type'] == 'image/webp' || $data['file_type'] == 'image/svg') {
 		$media['is_photo'] = 1;
 	} else $media['is_photo'] = 0;
 	if ($CI->back_m->insert('media', $media)) {
