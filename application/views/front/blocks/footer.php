@@ -1,6 +1,6 @@
-<footer id="footer" class="main-footer mt-5 pt-0 pb-0" style="overflow:hidden;background-color: #2e3972;">
+<div class="item_container main_padding mt-3"><img class="nav_logo" src="<?= base_url('assets/front/img/logoJS.png'); ?>" alt="logo ad awards"></div>
+<footer id="footer" class="main-footer pt-0 pb-0" style="overflow:hidden;background-color: #2e3972;">
   <div class="item_container main_padding">
-    <div class="myrow"><img class="nav_logo" src="<?= base_url('assets/front/img/logoJS.png'); ?>" alt="logo ad awards"></div>
     <div class="grid-12 small_padding gtab-4">
       <div class="grid-1 size-5 tab_size-2">
         <p class="text_footer" style="font-weight:700;">PPH im. Jędrzeja Śniadeckiego</p>

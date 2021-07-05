@@ -114,6 +114,16 @@ body {
   width: 96%;
   margin-left: 0.4vw;
 }
+.title_product_2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  width: 96%;
+  height: 70px;
+  margin-left: 0.4vw;
+  color: white;
+}
 p.line_product {
   min-height: 36px;
   vertical-align: top !important;
@@ -235,7 +245,19 @@ p.line_product {
 .offer_block {
   width: inherit;
   height: inherit;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #152b70 100%);
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(
+    0deg,
+    rgba(21, 43, 112, 1) 0%,
+    rgba(21, 43, 112, 0) 50%,
+    rgba(36, 60, 135, 0) 100%
+  );
+  transition: 0.5s;
+  padding-bottom: 0px;
+}
+.offer_block:hover {
+  padding-bottom: 30px;
 }
 
 .offer_box {
@@ -693,6 +715,7 @@ a.blank {
   }
   .section_text {
     width: 75%;
+    font-size: 23px;
   }
   .inner_padding {
     padding: 70px 0px 0px 0px;

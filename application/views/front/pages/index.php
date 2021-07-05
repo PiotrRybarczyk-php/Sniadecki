@@ -52,22 +52,30 @@
     <div class="grid-4 gtab-2 gmob-1">
         <div class="item_container small_padding mob_space">
             <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head1.png'); ?>);">
-                <div class="offer_block"></div>
+                <a href="#" class="offer_block">
+                    <p class="title_product_2">Osłona Przeciwodpryskowa Siatkowa</p>
+                </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
             <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head2.jpg'); ?>);">
-                <div class="offer_block"></div>
+                <a href="#" class="offer_block">
+                    <p class="title_product_2">Osłona Przeciwodpryskowa Siatkowa</p>
+                </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
             <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head3.png'); ?>);">
-                <div class="offer_block"></div>
+                <a href="#" class="offer_block">
+                    <p class="title_product_2">Osłona Przeciwodpryskowa Siatkowa</p>
+                </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
             <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head4.jpg'); ?>);">
-                <div class="offer_block"></div>
+                <a href="#" class="offer_block">
+                    <p class="title_product_2">Osłona Przeciwodpryskowa Siatkowa</p>
+                </a>
             </div>
         </div>
     </div>
