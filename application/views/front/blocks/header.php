@@ -80,7 +80,7 @@
             <ul class="navbar-nav">
               <?php for ($key = 0; $key < 4; $key++) :  $current = $subpages[$key]->page; ?>
                 <li class="main-header__nav-item nav-item page_list">
-                  <a class=" <?= ($this->uri->segment(1) == $current ? 'highlight' : 'nav-link'); ?>  py-2" href="<?= base_url(); ?><?= $subpages[$key]->page; ?>"><?= $subpages[$key]->title; ?></a>
+                  <a class=" <?= ($this->uri->segment(1) == $current ? 'nav-link selected' : 'nav-link'); ?>  py-2" href="<?= base_url(); ?><?= $subpages[$key]->page; ?>"><?= $subpages[$key]->title; ?></a>
                 </li>
               <?php endfor; ?>
               <li class="main-header__nav-item nav-item mx-5" style="color:white"> </li>

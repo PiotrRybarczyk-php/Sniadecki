@@ -82,6 +82,13 @@ class Subpages extends CI_Controller
 					if ($value == 'usunięte') {
 						$insert['photo2'] = '';
 					}
+				} else if ($key == 'server_photo_3') {
+					if ($value != '') {
+						$insert['photo3'] = $value;
+					}
+					if ($value == 'usunięte') {
+						$insert['photo3'] = '';
+					}
 				} else {
 					$insert[$key] = $value;
 				}

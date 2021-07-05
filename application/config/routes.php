@@ -6,12 +6,11 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 
 
-$route['offline'] = 'home/offline';
-$route['online'] = 'home/online';
-$route['blog'] = 'home/blog';
+$route['oferta'] = 'home/offers';
+$route['katalog'] = 'home/catalog';
+$route['certyfikaty'] = 'home/certificates';
 $route['wpis/(.*)/(.+)'] = 'home/single_article/$1/$2';
 $route['kontakt'] = 'home/contact';
-$route['test'] = 'home/testpage';
 //SCIAGA
 // $route['odziez/(.*)/(.+)'] = 'home/odziez/$1/$2';
 // $route['obuwie/(.*)/(.+)'] = 'home/obuwie/$1/$2';

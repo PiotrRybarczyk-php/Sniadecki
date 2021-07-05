@@ -29,4 +29,10 @@ class Home extends CI_Controller
 		$data['info_4'] = $this->back_m->get_one('info', 4);
 		echo loadViewsFront('index', $data);
 	}
+	public function contact()
+	{
+		$data = loadDefaultDataFront();
+
+		echo loadViewsFront('contact', $data);
+	}
 }

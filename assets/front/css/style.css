@@ -47,6 +47,11 @@ body {
   width: 100%;
   display: block;
 }
+.box_flex {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
 
 .section_line {
   position: absolute;
@@ -168,6 +173,17 @@ p.line_product {
   letter-spacing: normal;
   margin-bottom: 30px;
 }
+.textbox_contact {
+  width: 45vw;
+  min-height: 300px;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  margin-bottom: 30px;
+}
+
 .text_footer {
   font-size: 22px;
   font-weight: 200;
@@ -231,6 +247,10 @@ p.line_product {
 }
 .img_get_medium {
   width: 100%;
+}
+.img_get_contact {
+  width: 674px;
+  height: 403px;
 }
 
 .img_get_small {
@@ -302,6 +322,32 @@ p.line_product {
 }
 .nav_pic {
   width: 15vw;
+}
+.banner {
+  height: 310px;
+  background-size: cover;
+  background-position: center;
+}
+.banner_content {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-image: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    #152b70 100%
+  );
+}
+.banner_title {
+  font-size: 73px;
+  font-weight: 700;
+  font-style: normal;
+}
+.selected {
+  color: #fbe900 !important;
 }
 
 .grid-1 {
@@ -567,6 +613,31 @@ a.blank {
     rgba(21, 43, 112, 1) 100%
   );
 }
+.contact_title {
+  margin-bottom: 32px;
+  margin-top: 32px;
+  font-weight: 200;
+}
+.contact_form {
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  background-color: #19296f;
+}
+.contact_input {
+  height: 53px;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+}
+.contact_area {
+  width: 100%;
+  min-height: 336px;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+}
 
 @media (max-width: 1600px) {
   .offer_box {
@@ -802,6 +873,12 @@ a.blank {
   .text_footer {
     font-size: 16px;
     word-break: normal;
+  }
+  .banner_title {
+    font-size: 62px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
   }
 }
 @media (max-width: 330px) {
