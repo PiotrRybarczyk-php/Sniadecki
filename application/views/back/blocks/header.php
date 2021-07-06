@@ -66,6 +66,15 @@
         <span class="menu-item-label">Poradnik</span>
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
+    <a href="<?php echo base_url(); ?>panel/distribs" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'distribs') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-folder-open tx-20"></i>
+        <span class="menu-item-label">Dystrybutorzy</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
     <a href="<?php echo base_url(); ?>panel/mails" class="br-menu-link
         <?php if ($this->uri->segment(2) == 'mails') {
           echo 'active';

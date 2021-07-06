@@ -32,7 +32,7 @@ class Home extends CI_Controller
 	public function contact()
 	{
 		$data = loadDefaultDataFront();
-
+		$data['contacts'] = $this->back_m->get_all('distribs');
 		echo loadViewsFront('contact', $data);
 	}
 }
