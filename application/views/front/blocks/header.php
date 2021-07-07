@@ -69,7 +69,7 @@
     <nav id="navbar" class="autohide main-header__navbar navbar navbar-expand-lg navbar-light flex-column mobile_border" id="navbar">
       <div class="row" style="width:100vw;min-height:150px;align-items:center;">
         <div class="col-lg-3"><a class="navbar-brand" href="<?= base_url(); ?>">
-            <img class="nav_logo" src="<?= base_url('assets/front/img/logoJS.png'); ?>" alt="logo ad awards">
+            <img class="nav_logo" src="<?= base_url('uploads/') . $logo[0]->photo; ?>" alt="logo Sniadecki">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

@@ -46,9 +46,9 @@ foreach ($contacts as $item) {
     <?= "state_info[14] = '" . $state_info[14] . "';\n" ?>
     <?= "state_info[15] = '" . $state_info[15] . "';" ?>
 </script>
-<div class="box_normal banner" style="background-image:url(<?= base_url('assets/front/img/metal-banner.webp') ?>);">
+<div class="box_normal banner" style="background-position: center <?= $logo[4]->position . '%'; ?>;background-image:url(<?= base_url('uploads/') . $logo[4]->photo; ?>);">
     <div class="banner_content main_padding">
-        <p class="banner_title">Kontakt</p>
+        <p class="banner_title"><?= $logo[4]->title; ?></p>
     </div>
 </div>
 <?php if ($this->session->flashdata('success')) : ?>
@@ -249,7 +249,7 @@ foreach ($contacts as $item) {
                 <div class="state_btn"><i class="fas fa-chevron-right"></i></div>
             </div>
         </div>
-        <div class="grid-2 size-3 gmob-1 tab_size-2 mob_size-1" style="height:fit-content;transition:0.3s;" id="info-element">
+        <div class="contact_block grid-2 size-3 gmob-1 tab_size-2 mob_size-1" id="info-element">
         </div>
     </div>
 </div>

@@ -9,6 +9,8 @@ $route['translate_uri_dashes'] = TRUE;
 $route['oferta'] = 'home/offers';
 $route['katalog'] = 'home/catalog';
 $route['certyfikaty'] = 'home/certificates';
+$route['certyfikaty_archiwalne'] = 'home/certificates_old';
+$route['certyfikaty_aktualne'] = 'home/certificates_new';
 $route['wpis/(.*)/(.+)'] = 'home/single_article/$1/$2';
 $route['kontakt'] = 'home/contact';
 //SCIAGA

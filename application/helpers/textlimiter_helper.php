@@ -14,7 +14,7 @@ function textlim($text, $size)
     }
     $lenght = strlen($new_text);
     if ($lenght > $size) {
-        $text = substr($text, 0, $new_size) . '...';
+        $text = substr($text, 0, $new_size) . '...' . '</p>';
     }
     return $text;
 }

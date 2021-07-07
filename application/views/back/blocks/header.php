@@ -21,6 +21,15 @@
         <span class="menu-item-label">Podstrony</span>
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
+    <a href="<?php echo base_url(); ?>panel/logos" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'logos') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-ad tx-20"></i>
+        <span class="menu-item-label">Loga i Banery</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
     <a href="#" class="br-menu-link
         <?php if ($this->uri->segment(2) == 'partners' || $this->uri->segment(2) == 'atributes') {
           echo 'active';
@@ -66,6 +75,24 @@
         <span class="menu-item-label">Poradnik</span>
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
+    <a href="#" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'partners' || $this->uri->segment(2) == 'atributes') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon far fa-caret-square-down tx-20"></i>
+        <span class="menu-item-label">Certyfikaty</span>
+        <i class="menu-item-arrow fa fa-angle-down"></i>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
+    <ul class="br-menu-sub nav flex-column">
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/certificates_new" class="nav-link <?php if ($this->uri->segment(2) == 'certificates_new' || $this->uri->segment(3) == 'certificates_new') {
+                                                                                                        echo 'active';
+                                                                                                      } ?>">Certyfikaty Aktualne</a></li>
+      <li class="nav-item"><a href="<?php echo base_url(); ?>panel/certificates_old" class="nav-link <?php if ($this->uri->segment(2) == 'certificates_old' || $this->uri->segment(3) == 'certificates_old') {
+                                                                                                        echo 'active';
+                                                                                                      } ?>">Certyfikaty Archiwalne</a></li>
+    </ul>
     <a href="<?php echo base_url(); ?>panel/distribs" class="br-menu-link
         <?php if ($this->uri->segment(2) == 'distribs') {
           echo 'active';

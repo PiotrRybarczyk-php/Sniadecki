@@ -94,7 +94,7 @@
             <?= textlim($info_1->description, 1506); ?>
         </div>
         <div class="item_container_center size-2 mob_size-1">
-            <div style="position:relative;margin-left:3%;">
+            <div class="item_container_picture">
                 <img class="img_get_small" src="<?= base_url('uploads/') . $info_1->photo; ?>">
                 <div class="img_overlay"></div>
             </div>
@@ -158,12 +158,12 @@
     <span class="section_line"></span>
 </div>
 <div class="item_container main_padding" style="color:black;">
-    <div class="grid-5 gmob-1">
-        <div class="grid-1 size-3 small_padding ">
+    <div class="grid-5 gtab-1">
+        <div class="grid-1 size-3 tab_size-1 small_padding ">
             <div class="myrow text_base simple_text" style="max-width:905px;"><?= textlim($info_2->description, 1006); ?></div>
             <div class="item_container_align"><a class="blank" href="<?= base_url() . $info_2->link; ?>"><button class="btn_JS"><?= $info_2->button; ?></button></a></div>
         </div>
-        <div class="item_container_center size-2 small_padding ">
+        <div class="item_container_center size-2 tab_size-1 small_padding ">
             <div style="position:relative;">
                 <img class="img_get_medium" src="<?= base_url('uploads/') . $info_2->photo; ?>">
                 <div class="img_cover"></div>

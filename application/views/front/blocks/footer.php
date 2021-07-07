@@ -1,24 +1,24 @@
-<div class="item_container main_padding mt-3"><img class="nav_logo" src="<?= base_url('assets/front/img/logoJS.png'); ?>" alt="logo ad awards"></div>
-<footer id="footer" class="main-footer pt-0 pb-0" style="overflow:hidden;background-color: #2e3972;">
+<div class="item_container main_padding mt-3"><img class="nav_logo" src="<?= base_url('uploads/') . $logo[0]->photo; ?>" alt="logo Sniadecki"></div>
+<footer id="footer" class="main-footer pt-5 pb-0" style="overflow:hidden;background-color: #2e3972;">
   <div class="item_container main_padding">
     <div class="grid-12 small_padding gtab-4">
       <div class="grid-1 size-5 tab_size-2">
         <p class="text_footer" style="font-weight:700;">PPH im. Jędrzeja Śniadeckiego</p>
         <p class="text_footer" style="font-weight:700;">Sp. z o.o.</p>
-        <p class="text_footer">87-100 Toruń</p>
-        <p class="text_footer">ul. Polna 115</p>
+        <p class="text_footer"><?= $contact->zip_code . ' ' . $contact->city; ?></p>
+        <p class="text_footer"><?= $contact->address; ?></p>
         <p></p>
-        <p class="text_footer">tel.: <a class="link" href="tel:333333333">215367218</a></p>
+        <p class="text_footer">tel.: <a class="link" href="tel:<?= $contact->phone1; ?>"><?= $contact->phone1; ?></a></p>
       </div>
       <div class="grid-1 size-4 tab_size-2">
         <p class="text_footer" style="font-weight:700;">Ważne Informacje</p>
         <p class="text_footer line_unset"><a class="link" href="">Polityka Prywatności RODO</a></p>
-        <p class="text_footer line_unset"><a class="link" href="">Kontakt</a></p>
+        <p class="text_footer line_unset"><a class="link" href="<?= base_url('kontakt'); ?>">Kontakt</a></p>
       </div>
       <div class="grid-1 size-2">
-        <p class="text_footer line_unset"><a class="link" href="">Oferta</a></p>
-        <p class="text_footer line_unset"><a class="link" href="">Katalog</a></p>
-        <p class="text_footer line_unset"><a class="link" href="">Poradnik</a></p>
+        <p class="text_footer line_unset"><a class="link" href="<?= base_url('oferta'); ?>">Oferta</a></p>
+        <p class="text_footer line_unset"><a class="link" href="<?= base_url('katalog'); ?>">Katalog</a></p>
+        <p class="text_footer line_unset"><a class="link" href="<?= base_url('poradnik'); ?>">Poradnik</a></p>
       </div>
       <div class="grid-1" style="max-height: 70px;width:145px;">
         <p class="text_footer" style="text-align:center">Nasze media:</p>
@@ -30,10 +30,10 @@
   <div class="item_container main_padding">
     <div class="grid-2">
       <div class="myrow">
-        <p class="text_footer line_unset" style="font-weight:500;word-break:normal;">Copyright by PPH im. Jędrzeja Śniadeckiego Sp. z o.o.</p>
+        <p class="text_footer line_unset" style="word-break:normal;">Copyright by PPH im. Jędrzeja Śniadeckiego Sp. z o.o.</p>
       </div>
       <div class="myrow flex_right">
-        <p class="text_footer line_unset" style="font-weight:500;word-break:normal;">Created with love by Adawards</p>
+        <p class="text_footer line_unset" style="word-break:normal;">Created with love by <a class="link" href="https://agencjamedialna.pro/" style="font-weight:500;">Adawards</a></p>
       </div>
     </div>
   </div>
