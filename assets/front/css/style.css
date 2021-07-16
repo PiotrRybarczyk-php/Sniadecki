@@ -5,6 +5,8 @@ html {
 body {
   font-family: Montserrat;
   overflow-x: hidden;
+  padding-left: 6vw;
+  padding-right: 6vw;
 }
 :root {
   --c2: 50%;
@@ -27,7 +29,7 @@ p.card_name {
   margin-bottom: 0px;
 }
 .contact_padding {
-  font-size: 20px;
+  font-size: 18px;
   color: black;
   margin-left: 5vw;
   margin-bottom: 1rem;
@@ -94,7 +96,7 @@ p.card_name {
 
 .page_list {
   text-transform: uppercase;
-  font-size: 1.35vw;
+  font-size: 1vw;
   font-weight: 500;
   padding-left: 3vw;
   padding-right: 3vw;
@@ -105,6 +107,11 @@ p.card_name {
   display: block;
   overflow-y: scroll;
   max-height: 600px;
+}
+
+a.brand {
+  width: 100%;
+  text-decoration: none;
 }
 
 .box_hidden {
@@ -144,7 +151,7 @@ p.card_name {
   height: 96px;
 }
 .title_product {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -153,7 +160,7 @@ p.card_name {
   margin-left: 0.4vw;
 }
 .title_product_2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -200,7 +207,7 @@ p.line_product {
   width: 30vw;
   min-height: 300px;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
@@ -210,7 +217,7 @@ p.line_product {
   width: 45vw;
   min-height: 300px;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
@@ -241,7 +248,7 @@ p.line_product {
 
 .simple_text {
   color: #212121;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 .tiny_text {
@@ -351,10 +358,16 @@ p.line_product {
   padding-bottom: 50px !important;
 }
 .nav_logo {
+  width: 100%;
+}
+.foot_logo {
   width: 23vw;
 }
+.navbar-brand {
+  width: 100%;
+}
 .nav_pic {
-  width: 15vw;
+  width: 100%;
 }
 .banner {
   height: 310px;
@@ -576,7 +589,7 @@ a.blank {
 }
 .carousel {
   width: 100%;
-  height: 930px;
+  height: 800px;
   overflow-y: hidden;
 }
 .carousel-inner {
@@ -604,7 +617,7 @@ a.blank {
 .btn_JS {
   padding: 23px 69px 23px 69px;
   text-align: center;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
@@ -659,7 +672,7 @@ a.blank {
 }
 .contact_input {
   height: 53px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   font-style: normal;
   text-align: center;
@@ -667,13 +680,13 @@ a.blank {
 .contact_area {
   width: 100%;
   min-height: 336px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   font-style: normal;
 }
 p.contact_info {
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   font-style: normal;
   letter-spacing: normal;
@@ -948,7 +961,7 @@ p.contact_info {
     padding-left: 0.6vw;
   }
   .text_footer {
-    font-size: 20px;
+    font-size: 18px;
   }
   .cert_padding {
     padding-left: 13vw;
@@ -969,23 +982,42 @@ p.contact_info {
     position: relative;
     justify-content: center;
   }
+  .nav_pic {
+    width: 80%;
+  }
 }
 
 @media (max-width: 991px) {
-  .navbar-toggler {
-    position: absolute;
-    top: 18px;
-    right: 10vw;
-  }
   .nav-link {
     font-size: 15px;
   }
+  .navbar-brand {
+    margin-right: 0px;
+    width: 80%;
+  }
+  a.brand {
+    width: 80% !important;
+  }
   .nav_logo {
-    width: 40vw;
+    width: 80%;
+  }
+  .toggler_box {
+    width: 20%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav_pic {
+    width: 20%;
   }
 }
 
 @media (max-width: 500px) {
+  body {
+    padding-left: unset;
+    padding-right: unset;
+  }
   .item_container_picture {
     width: 100%;
   }
@@ -1016,9 +1048,6 @@ p.contact_info {
   }
   .silder_img {
     background-size: cover !important;
-  }
-  .nav_logo {
-    width: 67vw;
   }
   .myrow {
     justify-content: center;
@@ -1117,10 +1146,16 @@ p.contact_info {
     font-size: 15vw;
     font-weight: 600;
   }
+  .nav_pic {
+    width: 30%;
+  }
+  .foot_logo {
+    width: 86vw;
+  }
 }
 @media (max-width: 330px) {
   .section_text {
-    font-size: 20px;
+    font-size: 18px;
   }
   p.contact_info {
     line-height: 22px;

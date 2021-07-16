@@ -7,11 +7,14 @@ class Subpages extends CI_Controller
 	public function index()
 	{
 		if (checkAccess($access_group = ['administrator', 'redaktor'], $_SESSION['rola'])) {
+			if (!$this->db->table_exists($this->uri->segment(2))) {
+				$this->base_m->create_table($this->uri->segment(2));
+			}
 			// DEFAULT DATA
 			$data = loadDefaultData();
 
-			$data['subpages'] = $this->back_m->get_all('subpages');
-			echo loadSubViewsBack('subpages', 'index', $data);
+			$data['rows'] = $this->back_m->get_all($this->uri->segment(2));
+			echo loadSubViewsBack($this->uri->segment(2), 'index', $data);
 		} else {
 			redirect('panel');
 		}
@@ -21,16 +24,12 @@ class Subpages extends CI_Controller
 	{
 		if (checkAccess($access_group = ['administrator', 'redaktor'], $_SESSION['rola'])) {
 			// DEFAULT DATA
-			$data['mails'] = $this->back_m->get_all('mails');
-			$data['user'] = $this->back_m->get_one('users', $_SESSION['id']);
-			$data['media'] = $this->back_m->get_all('media');
-			$data['settings'] = $this->back_m->get_one('settings', 1);
-			$data['contact'] = $this->back_m->get_one('contact_settings', 1);
-			// DEFAULT DATA
+			$data = loadDefaultData();
+
 			if ($id != '') {
-				$data['value'] = $this->back_m->get_one('subpages', $id);
+				$data['value'] = $this->back_m->get_one($this->uri->segment(2), $id);
 			}
-			echo loadSubViewsBack('subpages', $type, $data);
+			echo loadSubViewsBack($this->uri->segment(2), $type, $data);
 		} else {
 			redirect('panel');
 		}
@@ -44,7 +43,7 @@ class Subpages extends CI_Controller
 				mkdir('./uploads/' . $now, 0777, TRUE);
 			}
 			$config['upload_path'] = './uploads/' . $now;
-			$config['allowed_types'] = 'gif|jpg|png|jpeg';
+			$config['allowed_types'] = '*';
 			$config['max_size'] = 0;
 			$config['max_width'] = 0;
 			$config['max_height'] = 0;
@@ -52,18 +51,19 @@ class Subpages extends CI_Controller
 			$this->upload->initialize($config);
 
 			foreach ($_POST as $key => $value) {
-				if ($key == 'page') {
-					$this->form_validation->set_rules('page', 'Strona', 'required|is_unique[subpages.page]');
-					if ($this->form_validation->run() == FALSE) {
-						$this->session->set_flashdata('flashdata', 'Rekord dla takiej strony już istnieje!');
-						redirect('panel/' . $table);
-					} else {
-					}
+
+				if (!$this->db->field_exists($key, $table)) {
+					$this->base_m->create_column($table, $key);
 				}
+
 				if ($key == 'name_photo_1') {
 					if ($this->upload->do_upload('photo_1')) {
 						$data = $this->upload->data();
 						$insert['photo'] = $now . '/' . $data['file_name'];
+						if ($data['image_width'] > 1440) {
+							resizeImg($data['file_name'], $now, '1440');
+						}
+
 						addMedia($data);
 					} elseif ($value == 'usunięte') {
 						$insert['photo'] = '';
@@ -82,19 +82,11 @@ class Subpages extends CI_Controller
 					if ($value == 'usunięte') {
 						$insert['photo2'] = '';
 					}
-				} else if ($key == 'server_photo_3') {
-					if ($value != '') {
-						$insert['photo3'] = $value;
-					}
-					if ($value == 'usunięte') {
-						$insert['photo3'] = '';
-					}
 				} else {
 					$insert[$key] = $value;
 				}
 			}
 			if ($type == 'insert') {
-				return false;
 				$this->back_m->insert($table, $insert);
 				$this->session->set_flashdata('flashdata', 'Rekord został dodany!');
 			} else {

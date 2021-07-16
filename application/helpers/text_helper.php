@@ -18,3 +18,11 @@ function textlim($text, $size)
     }
     return $text;
 }
+function trimpath($path)
+{
+    $occur = 'uploads/';
+    $occur_l = strlen($occur);
+    $pos = strpos($path, $occur) + $occur_l;
+    $path = substr($path, $pos);
+    return $path;
+}

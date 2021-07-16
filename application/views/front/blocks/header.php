@@ -67,16 +67,19 @@
   ?>
   <header>
     <nav id="navbar" class="autohide main-header__navbar navbar navbar-expand-lg navbar-light flex-column mobile_border" id="navbar">
-      <div class="row" style="width:100vw;min-height:150px;align-items:center;">
-        <div class="col-lg-3"><a class="navbar-brand" href="<?= base_url(); ?>">
-            <img class="nav_logo" src="<?= base_url('uploads/') . $logo[0]->photo; ?>" alt="logo Sniadecki">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <div class="row" style="width:100%;min-height:150px;align-items:center;">
+        <div class="col-lg-3 col-12">
+          <div class="row">
+            <a class="brand" href=""><img class="nav_logo" src="<?= base_url('uploads/') . $logo[0]->photo; ?>" alt="logo Sniadecki"></a>
+            <div class="toggler_box">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-7">
-          <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="col-lg-7 col-12">
+          <div class="collapse navbar-collapse" style="min-height: inherit;align-items:flex-end;" id="navbarNav">
             <ul class="navbar-nav">
               <?php for ($key = 0; $key < 4; $key++) :  $current = $subpages[$key]->page; ?>
                 <li class="main-header__nav-item nav-item page_list">
@@ -87,8 +90,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-2" style="display:flex;justify-content:flex-end;">
-          <a class="navbar-brand" style="margin-right:2rem;" href="<?= base_url(); ?>">
+        <div class="col-lg-2 col-12">
+          <a class="box_flex flex_right" style="margin-right:2rem;" href="<?= base_url(); ?>">
             <img class="nav_pic" src="<?= base_url('assets/front/img/gazele.png'); ?>" alt="gazele">
           </a>
         </div>
