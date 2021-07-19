@@ -13,6 +13,9 @@ $route['certyfikaty_archiwalne'] = 'home/certificates_old';
 $route['certyfikaty_aktualne'] = 'home/certificates_new';
 $route['wpis/(.*)/(.+)'] = 'home/single_article/$1/$2';
 $route['kontakt'] = 'home/contact';
+$route['kategoria/(.*)/(.+)'] = 'home/category/$1/$2';
+$route['podkategoria/(.*)/(.+)'] = 'home/subcategory/$1/$2';
+$route['produkt/(.*)/(.+)'] = 'home/product/$1/$2';
 //SCIAGA
 // $route['odziez/(.*)/(.+)'] = 'home/odziez/$1/$2';
 // $route['obuwie/(.*)/(.+)'] = 'home/obuwie/$1/$2';

@@ -28,6 +28,11 @@ p.card_name {
   text-transform: uppercase;
   margin-bottom: 0px;
 }
+
+.t-show {
+  display: none !important;
+}
+
 .contact_padding {
   font-size: 18px;
   color: black;
@@ -43,6 +48,31 @@ p.card_name {
   color: #fbe900;
 }
 
+.sep_top-s {
+  padding-top: 15px;
+}
+.sep_top-m {
+  padding-top: 30px;
+}
+.sep_top-l {
+  padding-top: 60px;
+}
+.sep_top-custom {
+  padding-top: 155px;
+}
+.sep_bot-s {
+  padding-bottom: 15px;
+}
+.sep_bot-m {
+  padding-bottom: 30px;
+}
+.sep_bot-l {
+  padding-bottom: 60px;
+}
+.sep_bot-xl {
+  padding-bottom: 120px;
+}
+
 .text_base {
   font-style: normal;
   letter-spacing: normal;
@@ -51,6 +81,120 @@ p.card_name {
 .item_container {
   width: 100%;
   display: block;
+}
+
+.nav_bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1050px;
+  width: 100%;
+  height: 56px;
+  padding-left: 26px;
+  background-color: #fee800;
+  overflow-x: hidden;
+  border-radius: 0px 0px 10px 10px;
+}
+
+a.nav_el {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+a.nav_el:hover {
+  color: #2e3972;
+  font-size: 20px;
+}
+
+.nav_bar p {
+  color: black;
+  margin-right: 3px;
+  font-size: 18px;
+  font-style: normal;
+  margin-bottom: 0px;
+}
+
+.offer_picture {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  max-width: 398px;
+  width: 100%;
+  height: 398px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.product_picture {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  max-width: 536px;
+  width: 100%;
+  height: 536px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.product_picture_2 {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  max-width: 455px;
+  width: 100%;
+  height: 455px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.product_list {
+  max-width: 1220px;
+}
+
+.picture_bor_b {
+  border: 1px solid #152b70;
+}
+
+.picture_bor_y {
+  border: 1px solid #fbe900;
+}
+
+p.product_header {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
+
+.product_padding {
+  padding-left: 7.2vw;
+}
+
+.product_padding_2 {
+  padding-left: 7.2vw;
+}
+
+a.offer_overlay {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #152b70 100%);
+}
+
+a.offer_overlay:hover {
+  height: 160px;
 }
 
 .item_container_center {
@@ -558,11 +702,17 @@ a.blank {
 .flex_center {
   justify-content: center;
 }
+.flex_align {
+  align-items: center;
+}
 .flex_right {
   justify-content: flex-end;
 }
 .flex_right_mob {
   justify-content: flex-end;
+}
+.flex_left_mob {
+  justify-content: flex-start;
 }
 .circle {
   position: absolute;
@@ -855,6 +1005,16 @@ p.contact_info {
   .tab_center {
     justify-content: center;
   }
+  .t-show {
+    display: flex !important;
+  }
+
+  .t-hide {
+    display: none;
+  }
+  .sep_top-custom {
+    padding-top: 110px;
+  }
   .textbox_contact {
     width: 100%;
   }
@@ -867,6 +1027,12 @@ p.contact_info {
   .mob_space {
     padding-top: 30px;
   }
+
+  .product_picture_2 {
+    max-width: 375px;
+    margin-bottom: 8px;
+  }
+
   .gtab-1 {
     grid-template-columns: 100% !important;
     grid-area: auto / auto;
@@ -985,6 +1151,10 @@ p.contact_info {
   .nav_pic {
     width: 80%;
   }
+  .product_padding_2 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1017,6 +1187,12 @@ p.contact_info {
   body {
     padding-left: unset;
     padding-right: unset;
+  }
+  .sep_top-custom {
+    padding-top: 70px;
+  }
+  .flex_left_mob {
+    justify-content: center;
   }
   .item_container_picture {
     width: 100%;
@@ -1151,6 +1327,16 @@ p.contact_info {
   }
   .foot_logo {
     width: 86vw;
+  }
+  .product_padding {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .product_picture {
+    height: 340px;
+  }
+  .product_picture_2 {
+    height: 340px;
   }
 }
 @media (max-width: 330px) {

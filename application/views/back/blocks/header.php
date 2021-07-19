@@ -66,6 +66,15 @@
                                                                                                 echo 'active';
                                                                                               } ?>">Opinie</a></li>
     </ul>
+    <a href="<?php echo base_url(); ?>panel/categories" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'categories') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-blog tx-20"></i>
+        <span class="menu-item-label">Kategorie</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
     <a href="<?php echo base_url(); ?>panel/blog" class="br-menu-link
         <?php if ($this->uri->segment(2) == 'blog') {
           echo 'active';

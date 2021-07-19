@@ -65,4 +65,29 @@ class Home extends CI_Controller
 		$data['type'] = "current";
 		echo loadViewsFront('certificates_subpage', $data);
 	}
+	public function offers()
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_all('logos');
+		echo loadViewsFront('offers', $data);
+	}
+	public function category($id, $cat)
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_all('logos');
+		echo loadViewsFront('category', $data);
+	}
+
+	public function subcategory($id, $cat)
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_all('logos');
+		echo loadViewsFront('subcategory', $data);
+	}
+	public function product($id, $cat)
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_all('logos');
+		echo loadViewsFront('product', $data);
+	}
 }
