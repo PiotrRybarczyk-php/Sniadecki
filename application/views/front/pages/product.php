@@ -6,9 +6,9 @@
 <div class="box_flex flex_center main_padding">
     <div class="nav_bar">
         <p><a class="nav_el" href="<?= base_url('oferta'); ?>">Oferta</a></p>
-        <p>/ <a class="nav_el" href="<?= base_url('kategoria/') . $cat->id . '/' . slug($cat->title); ?>"><?= $cat->title; ?></a></p>
-        <p>/ <a class="nav_el" href="<?= base_url('podkategoria/') . $subcat->id . '/' . slug($subcat->title); ?>"><?= $subcat->title; ?></a></p>
-        <p>/ <?= $product->title; ?></p>
+        <p>/<a class="nav_el" href="<?= base_url('kategoria/') . $cat->id . '/' . slug($cat->title); ?>"><?= $cat->title; ?></a></p>
+        <p>/<a class="nav_el" href="<?= base_url('podkategoria/') . $subcat->id . '/' . slug($subcat->title); ?>"><?= $subcat->title; ?></a></p>
+        <p>/<?= $product->title; ?></p>
     </div>
 </div>
 <div class="box_normal" style="height:102px;"></div>

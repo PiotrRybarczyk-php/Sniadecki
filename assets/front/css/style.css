@@ -100,6 +100,11 @@ a.nav_el {
   text-decoration: none;
   color: black;
   transition: 0.5s;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 27px;
+  text-overflow: ellipsis;
 }
 a.nav_el:hover {
   color: #295e8a;
@@ -107,11 +112,17 @@ a.nav_el:hover {
 }
 
 .nav_bar p {
+  height: 27px;
   color: black;
   margin-right: 3px;
   font-size: 18px;
   font-style: normal;
   margin-bottom: 0px;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 27px;
+  text-overflow: ellipsis;
 }
 
 .offer_picture {
@@ -1156,6 +1167,23 @@ p.contact_info {
     padding-left: 8px;
     padding-right: 8px;
   }
+
+  .nav_bar p {
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 25px;
+    text-overflow: ellipsis;
+    font-size: 16px;
+  }
+
+  a.nav_el {
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 25px;
+    text-overflow: ellipsis;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1338,6 +1366,19 @@ p.contact_info {
   }
   .product_picture_2 {
     height: 340px;
+  }
+  .nav_bar p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    height: 17px;
+  }
+  a.nav_el {
+    overflow: hidden;
+    white-space: nowrap;
+    height: 17px;
+    text-overflow: ellipsis;
   }
 }
 @media (max-width: 330px) {
