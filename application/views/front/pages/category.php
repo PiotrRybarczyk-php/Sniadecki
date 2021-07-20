@@ -1,23 +1,19 @@
 <div class="box_normal banner" style="background-position: center <?= $logo[1]->position . '%'; ?>;background-image:url(<?= base_url('uploads/') . $logo[1]->photo; ?>);">
     <div class="banner_content main_padding">
-        <p class="banner_title">Kategoria</p>
+        <p class="banner_title"><?= $cat->title; ?></p>
     </div>
 </div>
 <div class="box_flex flex_center main_padding">
     <div class="nav_bar">
         <p><a class="nav_el" href="<?= base_url('oferta'); ?>">Oferta</a></p>
-        <p>/ Kategoria</p>
+        <p>/ <?= $cat->title; ?></p>
     </div>
 </div>
 <div class="box_normal" style="height:102px;"></div>
 <div class="grid-3 gtab-2 gmob-1">
-    <div class="box_flex flex_center small_padding sep_top-s">
-        <div class="offer_picture" style="background-image:url(<?= base_url('assets/front/img/head3.png') ?>);"><a href="<?= base_url('podkategoria/1/osłony'); ?>" class="offer_overlay">PodKategoria</a></div>
-    </div>
-    <div class="box_flex flex_center small_padding sep_top-s">
-        <div class="offer_picture" style="background-image:url(<?= base_url('assets/front/img/head3.png') ?>);"><a href="#" class="offer_overlay">PodKategoria</a></div>
-    </div>
-    <div class="box_flex flex_center small_padding sep_top-s">
-        <div class="offer_picture" style="background-image:url(<?= base_url('assets/front/img/head3.png') ?>);"><a href="#" class="offer_overlay">PodKategoria</a></div>
-    </div>
+    <?php foreach ($subcat as $element) : ?>
+        <div class="box_flex flex_center small_padding sep_top-s">
+            <div class="offer_picture" style="background-image:url(<?= base_url('uploads/') . $element->photo; ?>);"><a href="<?= base_url(); ?>podkategoria/<?= $element->id; ?>/<?= slug($element->title); ?>" class="offer_overlay"><?= $element->title; ?></a></div>
+        </div>
+    <?php endforeach; ?>
 </div>

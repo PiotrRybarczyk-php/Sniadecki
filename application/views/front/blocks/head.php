@@ -6,16 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>
-
-    <?php if ($this->uri->segment(1) == '') {
-      echo $settings->meta_title . ' - Strona główna';
-    } else if ($this->uri->segment(1) == 'oferta-szczegoly') {
-      echo $settings->meta_title . ' - ' . $single->title;
-    } else if ($this->uri->segment(1) == 'wpis') {
-      echo $settings->meta_title . ' - ' . $single->title;
-    } else {
-      echo $settings->meta_title . ' - ' . $current_page->title;
-    } ?>
+    <?= $settings->meta_title; ?>
   </title>
   <meta name="description" content="<?= $settings->description ?>">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" async>

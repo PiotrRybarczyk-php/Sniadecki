@@ -75,6 +75,15 @@
         <span class="menu-item-label">Kategorie</span>
       </div><!-- menu-item -->
     </a><!-- br-menu-link -->
+    <a href="<?php echo base_url(); ?>panel/products" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'products') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-blog tx-20"></i>
+        <span class="menu-item-label">Produkty</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
     <a href="<?php echo base_url(); ?>panel/blog" class="br-menu-link
         <?php if ($this->uri->segment(2) == 'blog') {
           echo 'active';

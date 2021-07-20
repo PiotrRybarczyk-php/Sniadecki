@@ -102,8 +102,8 @@ a.nav_el {
   transition: 0.5s;
 }
 a.nav_el:hover {
-  color: #2e3972;
-  font-size: 20px;
+  color: #295e8a;
+  text-decoration: underline;
 }
 
 .nav_bar p {
@@ -190,6 +190,7 @@ a.offer_overlay {
   text-transform: uppercase;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #152b70 100%);
 }
 

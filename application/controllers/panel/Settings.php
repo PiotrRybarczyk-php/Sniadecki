@@ -164,7 +164,7 @@ class Settings extends CI_Controller
 				}
 			}
 			$this->session->set_flashdata('flashdata', 'Rekord został dodany!');
-			redirect('panel/settings/gallery/' . $table . '/' . $id);
+			redirect('panel/' . $table . '/gallery' . '/' . $id);
 		} else {
 			redirect('panel');
 		}

@@ -10,13 +10,9 @@
 </div>
 <div class="box_normal" style="height:102px;"></div>
 <div class="grid-3 gtab-2 gmob-1">
-    <div class="box_flex flex_center small_padding sep_top-s">
-        <div class="offer_picture" style="background-image:url(<?= base_url('assets/front/img/head3.png') ?>);"><a href="kategoria/1/test" class="offer_overlay">Kategoria</a></div>
-    </div>
-    <div class="box_flex flex_center small_padding sep_top-s">
-        <div class="offer_picture" style="background-image:url(<?= base_url('assets/front/img/head3.png') ?>);"><a href="#" class="offer_overlay">Kategoria</a></div>
-    </div>
-    <div class="box_flex flex_center small_padding sep_top-s">
-        <div class="offer_picture" style="background-image:url(<?= base_url('assets/front/img/head3.png') ?>);"><a href="#" class="offer_overlay">Kategoria</a></div>
-    </div>
+    <?php foreach ($cat as $element) : ?>
+        <div class="box_flex flex_center small_padding sep_top-s">
+            <div class="offer_picture" style="background-image:url(<?= base_url('uploads/') . $element->photo; ?>);"><a href="kategoria/<?= $element->id; ?>/<?= slug($element->title); ?>" class="offer_overlay"><?= $element->title; ?></a></div>
+        </div>
+    <?php endforeach; ?>
 </div>

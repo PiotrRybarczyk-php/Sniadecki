@@ -69,12 +69,15 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_all('logos');
+		$data['cat'] = $this->back_m->get_all('categories');
 		echo loadViewsFront('offers', $data);
 	}
 	public function category($id, $cat)
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_all('logos');
+		$data['cat'] = $this->back_m->get_one('categories', $id);
+		$data['subcat'] = $this->back_m->get_subcat($id);
 		echo loadViewsFront('category', $data);
 	}
 
@@ -82,12 +85,19 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_all('logos');
+		$data['subcat'] = $this->back_m->get_one('subcat', $id);
+		$data['cat'] = $this->back_m->get_one('categories', $data['subcat']->cat_id);
+		$data['product'] = $this->back_m->get_products($id);
 		echo loadViewsFront('subcategory', $data);
 	}
 	public function product($id, $cat)
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_all('logos');
+		$data['product'] = $this->back_m->get_one('products', $id);
+		$data['subcat'] = $this->back_m->get_one('subcat', $data['product']->sub_id);
+		$data['cat'] = $this->back_m->get_one('categories', $data['subcat']->cat_id);
+		$data['picture'] = $this->back_m->get_images('gallery', 'products', $id);
 		echo loadViewsFront('product', $data);
 	}
 }

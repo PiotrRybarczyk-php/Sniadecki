@@ -9,6 +9,13 @@ class Back_m extends CI_Model
         return $query->result();
     }
 
+    public function get_all_sort($table, $sort)
+    {
+        $this->db->order_by($sort, 'asc');
+        $query = $this->db->get($table);
+        return $query->result();
+    }
+
     public function get_with_limit($table, $limit, $sort = null)
     {
         $this->db->limit($limit);
@@ -27,9 +34,15 @@ class Back_m extends CI_Model
         return $query->row();
     }
 
-    public function get_subcat($cat)
+    public function get_subcat($id)
     {
-        $query = $this->db->query('SELECT * FROM subcat WHERE cat_id = ' . $cat);
+        $query = $this->db->query('SELECT * FROM subcat WHERE cat_id = ' . $id);
+        return $query->result();
+    }
+
+    public function get_products($subcat)
+    {
+        $query = $this->db->query('SELECT * FROM products WHERE sub_id = ' . $subcat);
         return $query->result();
     }
 
