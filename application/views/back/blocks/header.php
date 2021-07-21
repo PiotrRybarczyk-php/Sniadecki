@@ -477,14 +477,6 @@
       </div>
 
       <div class="pd-y-20 pd-x-25 tx-white">
-        <h6 class="tx-13 tx-normal">Opis witryny:</h6>
-        <p class="op-5 tx-13">Opis wyświetlany pod nazwa w przeglądarce Google</p>
-        <div class="pos-relative">
-          <textarea id="description" name="description" rows="5" onfocusout="updateTextarea('description' , 'settings')" class="form-control form-control-inverse transition pd-y-10"><?php echo $settings->description; ?></textarea>
-        </div>
-      </div>
-
-      <div class="pd-y-20 pd-x-25 tx-white">
         <h6 class="tx-13 tx-normal">Facebook:</h6>
         <p class="op-5 tx-13">Adres URL do Twojego profilu na Facebook'u</p>
         <div class="pos-relative">
