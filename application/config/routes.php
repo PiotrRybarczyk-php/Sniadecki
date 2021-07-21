@@ -11,6 +11,7 @@ $route['katalog'] = 'home/catalog';
 $route['certyfikaty'] = 'home/certificates';
 $route['certyfikaty_archiwalne'] = 'home/certificates_old';
 $route['certyfikaty_aktualne'] = 'home/certificates_new';
+$route['poradnik'] = 'home/blog';
 $route['wpis/(.*)/(.+)'] = 'home/single_article/$1/$2';
 $route['kontakt'] = 'home/contact';
 $route['kategoria/(.*)/(.+)'] = 'home/category/$1/$2';

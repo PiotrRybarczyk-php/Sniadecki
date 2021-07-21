@@ -29,6 +29,10 @@ p.card_name {
   margin-bottom: 0px;
 }
 
+.main-header__navbar {
+  box-shadow: none;
+}
+
 .t-show {
   display: none !important;
 }
@@ -980,7 +984,8 @@ p.contact_info {
 .download {
   width: 27px;
   height: 36px;
-  margin-left: 18px;
+  margin-left: 8px;
+  margin-right: 3px;
   background-size: cover;
 }
 
@@ -1216,6 +1221,9 @@ p.contact_info {
   body {
     padding-left: unset;
     padding-right: unset;
+  }
+  .main-header__navbar {
+    box-shadow: 0 4px 12px -1px grey;
   }
   .sep_top-custom {
     padding-top: 70px;

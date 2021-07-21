@@ -51,36 +51,36 @@
 <div class="box_center main_padding mb-3">
     <div class="grid-4 gtab-2 gmob-1">
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head1.png'); ?>);">
-                <a href="#" class="offer_block">
-                    <p class="title_product_2">Osłona Przeciwodpryskowa Siatkowa</p>
+            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $product[$products_page[0]->product_id - 1]->photo; ?>);">
+                <a href="produkt/<?= $products_page[0]->product_id; ?>/<?= slug($products_page[0]->title); ?>" class="offer_block">
+                    <p class="title_product_2"><?= $products_page[0]->title; ?></p>
                 </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head2.jpg'); ?>);">
-                <a href="#" class="offer_block">
-                    <p class="title_product_2">Osłona Przeciwodpryskowa Siatkowa</p>
+            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $product[$products_page[1]->product_id - 1]->photo; ?>);">
+                <a href="produkt/<?= $products_page[1]->product_id; ?>/<?= slug($products_page[1]->title); ?>" class="offer_block">
+                    <p class="title_product_2"><?= $products_page[1]->title; ?></p>
                 </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head3.png'); ?>);">
-                <a href="#" class="offer_block">
-                    <p class="title_product_2">Osłona Przeciwodpryskowa Siatkowa</p>
+            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $product[$products_page[2]->product_id - 1]->photo; ?>);">
+                <a href="produkt/<?= $products_page[2]->product_id; ?>/<?= slug($products_page[2]->title); ?>" class="offer_block">
+                    <p class="title_product_2"><?= $products_page[2]->title; ?></p>
                 </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('assets/front/img/head4.jpg'); ?>);">
-                <a href="#" class="offer_block">
-                    <p class="title_product_2">Osłona Przeciwodpryskowa Siatkowa</p>
+            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $product[$products_page[3]->product_id - 1]->photo; ?>);">
+                <a href="produkt/<?= $products_page[3]->product_id; ?>/<?= slug($products_page[3]->title); ?>" class="offer_block">
+                    <p class="title_product_2"><?= $products_page[3]->title; ?></p>
                 </a>
             </div>
         </div>
     </div>
 </div>
-<div class="myrow flex_center"><a class="blank" href="<?= base_url() . $info_3->title; ?>"><button class="btn_JS"><?= $info_3->button; ?></button></a></div>
+<div class="myrow flex_center"><a class="blank" href="oferta"><button class="btn_JS"><?= $info_3->button; ?></button></a></div>
 <div class="box_center qa_fade">
     <div class="base_text section_text"><?= $info_1->title; ?></div>
     <span class="section_line"></span>

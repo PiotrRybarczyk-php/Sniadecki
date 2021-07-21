@@ -16,47 +16,21 @@
                 <div class="row no-gutters">
                     <div class="col-md-8">
                         <div class="row">
-                            <!-- set -->
                             <div class="col-md-12 pr-0">
                                 <div class="form-group">
-                                    <label class="form-control-label">Tytuł: <span class="tx-danger">*</span></label>
-                                    <input class="form-control" type="text" name="title" value="<?php echo $value->title; ?>" required>
+                                    <input id='title' class="form-control" value="<?= $product[$value->product_id - 1]->title; ?>" name="title" type="hidden">
                                 </div>
                             </div><!-- col-4 -->
-                            <?php if ($value->has_button == 1) : ?>
-                                <div class="col-md-12 pr-0">
-                                    <div class="form-group bd-t-0-force">
-                                        <label class="form-control-label">Przycisk: <span class="tx-danger">*</span></label>
-                                        <input class="form-control" type="text" name="button" value="<?php echo $value->button; ?>" required>
-                                    </div>
-                                </div><!-- col-4 -->
-                            <?php endif ?>
-                        </div> <!-- set -->
-                        <div class="row">
-                            <!-- set -->
                             <div class="col-md-12 pr-0">
-                                <div class="form-group bd-t-0-force bd-b-0-force">
-                                    <label class="form-control-label">Opis działu:</label>
-                                    <textarea class="summernote" name="description"><?php echo $value->description; ?></textarea>
+                                <div class="form-group bd-t-0-force">
+                                    <label for="product" class="form-control-label">Wybierz Produkt: <span class="tx-danger">*</span></label>
+                                    <select onchange="update_title()" class="form-control" id="product" name="product_id">
+                                        <?php foreach ($product as $element) : ?>
+                                            <option <?php if ($value->product_id == $element->id) echo 'selected'; ?> value="<?= $element->id; ?>"><?= $element->title; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                 </div>
-                            </div>
-                            <!-- col-4 -->
-                        </div> <!-- set -->
-                        <div class="row">
-                            <!-- set -->
-                            <div class="col-md-3 pr-0">
-                                <label class="form-control-label">Produkt 1:</label>
-                            </div>
-                            <div class="col-md-3 pr-0">
-                                <label class="form-control-label">Produkt 2:</label>
-                            </div>
-                            <div class="col-md-3 pr-0">
-                                <label class="form-control-label">Produkt 3:</label>
-                            </div>
-                            <div class="col-md-3 pr-0">
-                                <label class="form-control-label">Produkt 4:</label>
-                            </div>
-                            <!-- col-4 -->
+                            </div><!-- col-4 -->
                         </div> <!-- set -->
                         <div class="row">
                             <div class="col-md-12 pr-0">
@@ -68,3 +42,11 @@
                         </div>
                     </div>
             </form><!-- form-layout -->
+            <script>
+                function update_title() {
+                    var src = document.getElementById('product');
+                    var dest = document.getElementById('title');
+                    var value = src.options[src.selectedIndex].innerHTML;
+                    dest.value = value;
+                }
+            </script>

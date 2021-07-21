@@ -24,6 +24,8 @@ class Home extends CI_Controller
 		$data['slider'] = $this->back_m->get_all('slider');
 		$data['info_3'] = $this->back_m->get_one('info', 3);
 		$data['info_1'] = $this->back_m->get_one('info', 1);
+		$data['products_page'] = $this->back_m->get_all('products_page');
+		$data['product'] = $this->back_m->get_all('products');
 		$data['products_info'] = $this->back_m->get_all('products_info');
 		$data['info_2'] = $this->back_m->get_one('info', 2);
 		$data['opinions'] = $this->back_m->get_all('opinions');
@@ -42,6 +44,20 @@ class Home extends CI_Controller
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_all('logos');
 		echo loadViewsFront('catalog', $data);
+	}
+	public function blog()
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_all('logos');
+		$data['entry'] = $this->back_m->get_all('blog');
+		echo loadViewsFront('blog', $data);
+	}
+	public function single_article($id, $slug)
+	{
+		$data = loadDefaultDataFront();
+		$data['logo'] = $this->back_m->get_all('logos');
+		$data['entry'] = $this->back_m->get_one('blog', $id);
+		echo loadViewsFront('single_article', $data);
 	}
 	public function certificates()
 	{

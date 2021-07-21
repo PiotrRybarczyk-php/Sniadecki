@@ -66,7 +66,7 @@
   <?php
   ?>
   <header>
-    <nav id="navbar" class="autohide main-header__navbar navbar navbar-expand-lg navbar-light flex-column mobile_border" style="box-shadow:none;" id="navbar">
+    <nav id="navbar" class="autohide main-header__navbar navbar navbar-expand-lg navbar-light flex-column mobile_border" id="navbar">
       <div class="row" style="width:100%;min-height:150px;align-items:center;">
         <div class="col-lg-3 col-12">
           <div class="row">

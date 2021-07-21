@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Products_page extends CI_Controller
+class Blog extends CI_Controller
 {
 
 	public function index()
@@ -25,8 +25,6 @@ class Products_page extends CI_Controller
 		if (checkAccess($access_group = ['administrator', 'redaktor'], $_SESSION['rola'])) {
 			// DEFAULT DATA
 			$data = loadDefaultData();
-
-			$data['product'] = $this->back_m->get_all('products');
 
 			if ($id != '') {
 				$data['value'] = $this->back_m->get_one($this->uri->segment(2), $id);

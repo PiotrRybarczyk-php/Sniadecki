@@ -17,40 +17,26 @@
                     <div class="col-md-8">
                         <div class="row">
                             <!-- set -->
-                            <div class="col-md-6 pr-0">
-                                <div class="form-group bd-r-1-force bd-b-0-force">
+                            <div class="col-md-12 pr-0">
+                                <div class="form-group">
                                     <label class="form-control-label">Tytuł: <span class="tx-danger">*</span></label>
-                                    <input class="form-control" type="text" name="title" value="<?php echo $value->title; ?>">
-                                </div>
-                            </div><!-- col-4 -->
-                            <div class="col-md-6 px-0">
-                                <div class="form-group bd-l-0-force bd-r-0-force bd-b-0-force">
-                                    <label class="form-control-label">Podtytuł:</label>
-                                    <input class="form-control" type="text" name="subtitle" value="<?php echo $value->subtitle; ?>">
+                                    <input class="form-control" type="text" name="title" value="<?php echo $value->title; ?>" required>
                                 </div>
                             </div><!-- col-4 -->
                         </div> <!-- set -->
                         <div class="row">
                             <!-- set -->
                             <div class="col-md-12 pr-0">
-                                <div class="form-group bd-t-1-force bd-b-0-force bd-r-0-force">
+                                <div class="form-group bd-t-0-force bd-b-0-force">
                                     <label class="form-control-label">Opis:</label>
                                     <textarea class="summernote" name="description"><?php echo $value->description; ?></textarea>
                                 </div>
-                            </div><!-- col-4 -->
-                        </div> <!-- set -->
-                        <div class="row">
-                            <!-- set -->
-                            <div class="col-md-12 pr-0">
-                                <div class="form-group bd-t-1-force bd-b-0-force bd-r-0-force">
-                                    <label class="form-control-label">Opis:</label>
-                                    <textarea class="summernote" name="description2"><?php echo $value->description2; ?></textarea>
-                                </div>
-                            </div><!-- col-4 -->
+                            </div>
+                            <!-- col-4 -->
                         </div> <!-- set -->
                         <div class="row">
                             <div class="col-md-12 pr-0">
-                                <div class="form-layout-footer bd pd-20 bd-r-0-force">
+                                <div class="form-layout-footer bd pd-20">
                                     <button class="btn btn-info" type="submit">Zapisz</button>
                                     <button class="btn btn-secondary" onclick="window.history.go(-1); return false;">Anuluj</button>
                                 </div><!-- form-group -->
@@ -59,23 +45,23 @@
                     </div>
                     <div class="col-md-4">
                         <div class="col-md-12">
-                            <div id="photoViewer_1" class="form-group bd-l-1-force text-center delete_photo cursor" onclick="clear_box(1);">
-                                <?php if (@$value->photo != '') {
-                                    echo '<img class="img-fluid img-thumbnail" src="' . base_url() . 'uploads/' . @$value->photo . '" width=75%>';
+                            <div id="photoViewer_1" class="form-group bd-l-0-force text-center delete_photo cursor" onclick="clear_box(1);">
+                                <?php if ($value->photo != '') {
+                                    echo '<img class="img-fluid img-thumbnail" src="' . base_url() . 'uploads/' . $value->photo . '" width=75%>';
                                 } else {
                                     echo '<img class="img-fluid img-thumbnail" src="http://via.placeholder.com/64x64" alt="">';
                                 } ?>
                             </div>
                         </div><!-- col-12 -->
                         <div class="col-md-12">
-                            <div class="form-group bd-t-0-force bd-l-1-force">
+                            <div class="form-group bd-t-0-force bd-l-0-force">
                                 <label class="form-control-label">Zdjęcie:</label>
                                 <input type="hidden" id="name_photo_1" name="name_photo_1">
                                 <button type="button" class="btn btn-info white w-100" onclick="openModal(1);">Dodaj</button>
                             </div>
                         </div><!-- col-12 -->
                         <div class="col-md-12">
-                            <div id="photoViewer_1" class="form-group bd-b-0-force bd-t-0-force bd-l-1-force">
+                            <div id="photoViewer_1" class="form-group bd-t-0-force bd-l-0-force">
                                 <label class="form-control-label">Tekst alternatywny zdjęcia:</label>
                                 <input class="form-control" type="text" name="alt" value="<?php echo $value->alt; ?>">
                             </div>
@@ -91,39 +77,17 @@
                         </div><!-- col-12 -->
                         <div class="col-md-12">
                             <div class="form-group bd-t-0-force bd-l-1-force">
-                                <label class="form-control-label">Zdjęcie w tle:</label>
+                                <label class="form-control-label">Zdjęcie:</label>
                                 <input type="hidden" id="name_photo_2" name="name_photo_2">
                                 <button type="button" class="btn btn-info white w-100" onclick="openModal(2);">Dodaj</button>
                             </div>
                         </div><!-- col-12 -->
                         <div class="col-md-12">
                             <div id="photoViewer_2" class="form-group bd-t-0-force bd-l-1-force">
-                                <label class="form-control-label">Tekst alternatywny zdjęcia w tle:</label>
+                                <label class="form-control-label">Tekst alternatywny zdjęcia:</label>
                                 <input class="form-control" type="text" name="alt2" value="<?php echo @$value->alt2; ?>">
                             </div>
                         </div><!-- col-12 -->
-                        <div class="col-md-12">
-                            <div id="photoViewer_3" class="form-group bd-l-1-force text-center delete_photo cursor" onclick="clear_box(3);">
-                                <?php if (@$value->photo3 != '') {
-                                    echo '<img class="img-fluid img-thumbnail" src="' . base_url() . 'uploads/' . @$value->photo3 . '" width=75%>';
-                                } else {
-                                    echo '<img class="img-fluid img-thumbnail" src="http://via.placeholder.com/64x64" alt="">';
-                                } ?>
-                            </div>
-                        </div><!-- col-12 -->
-                        <div class="col-md-12">
-                            <div class="form-group bd-t-0-force bd-l-1-force">
-                                <label class="form-control-label">Zdjęcie:</label>
-                                <input type="hidden" id="name_photo_3" name="name_photo_3">
-                                <button type="button" class="btn btn-info white w-100" onclick="openModal(3);">Dodaj</button>
-                            </div>
-                        </div><!-- col-12 -->
-                        <div class="col-md-12">
-                            <div id="photoViewer_3" class="form-group bd-b-0-force bd-t-0-force bd-l-1-force">
-                                <label class="form-control-label">Tekst alternatywny zdjęcia:</label>
-                                <input class="form-control" type="text" name="alt3" value="<?php echo $value->alt3; ?>">
-                            </div>
-                        </div>
                     </div>
                 </div><!-- row -->
                 <?php $this->load->view('back/forms/double_modal'); ?>
