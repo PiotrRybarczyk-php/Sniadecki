@@ -12,8 +12,10 @@
 <div class="box_normal" style="height:102px;"></div>
 <div class="grid-3 gtab-2 gmob-1">
     <?php foreach ($subcat as $element) : ?>
-        <div class="box_flex flex_center small_padding sep_top-s">
-            <div class="offer_picture" style="background-image:url(<?= base_url('uploads/') . $element->photo; ?>);"><a href="<?= base_url(); ?>podkategoria/<?= $element->id; ?>/<?= slug($element->title); ?>" class="offer_overlay"><?= $element->title; ?></a></div>
+        <div class="box_flex flex_center small_padding sep_bot-xl">
+            <a href="<?= base_url(); ?>podkategoria/<?= $element->id; ?>/<?= slug($element->title); ?>" class="offer_picture" style="background-image:url(<?= base_url('uploads/') . $element->photo; ?>);">
+                <div class="offer_overlay"><?= $element->title; ?></div>
+            </a>
         </div>
     <?php endforeach; ?>
 </div>

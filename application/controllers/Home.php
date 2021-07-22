@@ -25,7 +25,6 @@ class Home extends CI_Controller
 		$data['info_3'] = $this->back_m->get_one('info', 3);
 		$data['info_1'] = $this->back_m->get_one('info', 1);
 		$data['products_page'] = $this->back_m->get_all('products_page');
-		$data['product'] = $this->back_m->get_all('products');
 		$data['products_info'] = $this->back_m->get_all('products_info');
 		$data['info_2'] = $this->back_m->get_one('info', 2);
 		$data['opinions'] = $this->back_m->get_all('opinions');

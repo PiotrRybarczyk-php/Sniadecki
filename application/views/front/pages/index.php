@@ -51,28 +51,28 @@
 <div class="box_center main_padding mb-3">
     <div class="grid-4 gtab-2 gmob-1">
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $product[$products_page[0]->product_id - 1]->photo; ?>);">
+            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $products_page[0]->photo; ?>);">
                 <a href="produkt/<?= $products_page[0]->product_id; ?>/<?= slug($products_page[0]->title); ?>" class="offer_block">
                     <p class="title_product_2"><?= $products_page[0]->title; ?></p>
                 </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $product[$products_page[1]->product_id - 1]->photo; ?>);">
+            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $products_page[1]->photo; ?>);">
                 <a href="produkt/<?= $products_page[1]->product_id; ?>/<?= slug($products_page[1]->title); ?>" class="offer_block">
                     <p class="title_product_2"><?= $products_page[1]->title; ?></p>
                 </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $product[$products_page[2]->product_id - 1]->photo; ?>);">
+            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $products_page[2]->photo; ?>);">
                 <a href="produkt/<?= $products_page[2]->product_id; ?>/<?= slug($products_page[2]->title); ?>" class="offer_block">
                     <p class="title_product_2"><?= $products_page[2]->title; ?></p>
                 </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $product[$products_page[3]->product_id - 1]->photo; ?>);">
+            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $products_page[3]->photo; ?>);">
                 <a href="produkt/<?= $products_page[3]->product_id; ?>/<?= slug($products_page[3]->title); ?>" class="offer_block">
                     <p class="title_product_2"><?= $products_page[3]->title; ?></p>
                 </a>
@@ -93,9 +93,8 @@
         <div class="item_container size-3 mob_size-1 text_base simple_text">
             <?= textlim($info_1->description, 1506); ?>
         </div>
-        <div class="item_container_center size-2 mob_size-1">
-            <div class="item_container_picture">
-                <img class="img_get_small" src="<?= base_url('uploads/') . $info_1->photo; ?>">
+        <div class="item_container_center small_padding size-2 mob_size-1">
+            <div class="info_picture" style="background-image:url(<?= base_url('uploads/') . $info_1->photo; ?>);">
                 <div class="img_overlay"></div>
             </div>
         </div>
@@ -111,7 +110,7 @@
             <img class="img_get_tiny" src="<?= base_url('assets/front/img/iso.png'); ?>">
         </div>
         <div class="item_container_align size-2 mob_size-3 small_padding">
-            <a class="blank" href="<?= base_url() . $info_1->link; ?>"><button class="btn_JS"><?= $info_1->button; ?></button></a>
+            <a class="blank btn_margin" href="<?= base_url() . $info_1->link; ?>"><button class="btn_JS"><?= $info_1->button; ?></button></a>
         </div>
     </div>
 </div>
@@ -158,7 +157,7 @@
     <span class="section_line"></span>
 </div>
 <div class="item_container main_padding" style="color:black;">
-    <div class="grid-5 gtab-1">
+    <div class="grid-5 gtab-1 section_margin">
         <div class="grid-1 size-3 tab_size-1 small_padding ">
             <div class="myrow text_base simple_text" style="max-width:905px;"><?= textlim($info_2->description, 1006); ?></div>
             <div class="item_container_align"><a class="blank" href="<?= base_url() . $info_2->link; ?>"><button class="btn_JS"><?= $info_2->button; ?></button></a></div>

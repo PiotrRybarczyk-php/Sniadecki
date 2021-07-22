@@ -61,7 +61,7 @@
                                                                                                   } ?>">Produkty</a></li>
       <li class="nav-item"><a href="<?php echo base_url(); ?>panel/products_info" class="nav-link <?php if ($this->uri->segment(2) == 'products_info' || $this->uri->segment(3) == 'products_info') {
                                                                                                     echo 'active';
-                                                                                                  } ?>">Kafle Produktów</a></li>
+                                                                                                  } ?>">Kafle Usług</a></li>
       <li class="nav-item"><a href="<?php echo base_url(); ?>panel/opinions" class="nav-link <?php if ($this->uri->segment(2) == 'opinions' || $this->uri->segment(3) == 'opinions') {
                                                                                                 echo 'active';
                                                                                               } ?>">Opinie</a></li>

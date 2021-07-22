@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col-md-12 pr-0">
                                 <div class="form-group">
-                                    <input id='title' class="form-control" value="<?= $product[$value->product_id - 1]->title; ?>" name="title" type="hidden">
+                                    <input id='title' onload="update_title()" class="form-control" value="" name="title" type="hidden">
                                 </div>
                             </div><!-- col-4 -->
                             <div class="col-md-12 pr-0">
@@ -41,6 +41,32 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12">
+                            <div id="photoViewer_1" class="form-group bd-l-0-force text-center delete_photo cursor" onclick="clear_box(1);">
+                                <?php if ($value->photo != '') {
+                                    echo '<img class="img-fluid img-thumbnail" src="' . base_url() . 'uploads/' . $value->photo . '" width=75%>';
+                                } else {
+                                    echo '<img class="img-fluid img-thumbnail" src="http://via.placeholder.com/64x64" alt="">';
+                                } ?>
+                            </div>
+                        </div><!-- col-12 -->
+                        <div class="col-md-12">
+                            <div class="form-group bd-t-0-force bd-l-0-force">
+                                <label class="form-control-label">Zdjęcie:</label>
+                                <input type="hidden" id="name_photo_1" name="name_photo_1">
+                                <button type="button" class="btn btn-info white w-100" onclick="openModal(1);">Dodaj</button>
+                            </div>
+                        </div><!-- col-12 -->
+                        <div class="col-md-12">
+                            <div id="photoViewer_1" class="form-group bd-t-0-force bd-l-0-force">
+                                <label class="form-control-label">Tekst alternatywny zdjęcia:</label>
+                                <input class="form-control" type="text" name="alt" value="<?php echo $value->alt; ?>">
+                            </div>
+                        </div><!-- col-12 -->
+                    </div>
+                </div><!-- row -->
+                <?php $this->load->view('back/forms/double_modal'); ?>
             </form><!-- form-layout -->
             <script>
                 function update_title() {

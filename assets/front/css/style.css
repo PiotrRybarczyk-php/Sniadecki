@@ -33,6 +33,11 @@ p.card_name {
   box-shadow: none;
 }
 
+.section_margin {
+  margin-top: 160px !important;
+  margin-bottom: 160px !important;
+}
+
 .t-show {
   display: none !important;
 }
@@ -87,6 +92,10 @@ p.card_name {
   display: block;
 }
 
+.btn_margin {
+  padding-left: 43px;
+}
+
 .nav_bar {
   position: relative;
   display: flex;
@@ -129,13 +138,25 @@ a.nav_el:hover {
   text-overflow: ellipsis;
 }
 
+.info_picture {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  max-width: 460px;
+  width: 100%;
+  height: 536px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .offer_picture {
   position: relative;
   display: flex;
   align-items: flex-end;
-  max-width: 398px;
+  max-width: 352px;
   width: 100%;
-  height: 398px;
+  height: 312px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -192,11 +213,13 @@ p.product_header {
   padding-left: 7.2vw;
 }
 
-a.offer_overlay {
+.offer_overlay {
   position: relative;
+  transition: inherit;
   display: flex;
   width: 100%;
   height: 80px;
+  padding-bottom: 20px;
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -204,13 +227,18 @@ a.offer_overlay {
   font-style: normal;
   text-transform: uppercase;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   text-align: center;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #152b70 100%);
 }
 
-a.offer_overlay:hover {
+.offer_picture:hover {
+  transform: scale(1.02);
+}
+
+.offer_picture:hover .offer_overlay {
   height: 160px;
+  color: #fbe900;
 }
 
 .item_container_center {
@@ -518,7 +546,7 @@ p.line_product {
   padding-bottom: 50px !important;
 }
 .nav_logo {
-  width: 100%;
+  width: 80%;
 }
 .foot_logo {
   width: 23vw;
@@ -527,10 +555,10 @@ p.line_product {
   width: 100%;
 }
 .nav_pic {
-  width: 100%;
+  width: 90%;
 }
 .banner {
-  height: 310px;
+  height: 280px;
   background-size: cover;
   background-position: center 0%;
 }
@@ -1005,6 +1033,13 @@ p.contact_info {
   .cert_btn {
     font-size: 25px;
   }
+  .btn_margin {
+    padding-left: unset;
+  }
+  .section_margin {
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -1189,6 +1224,13 @@ p.contact_info {
     height: 25px;
     text-overflow: ellipsis;
   }
+  .info_picture {
+    height: 460px;
+  }
+  .section_margin {
+    margin-top: unset !important;
+    margin-bottom: unset !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1221,6 +1263,13 @@ p.contact_info {
   body {
     padding-left: unset;
     padding-right: unset;
+  }
+  .info_picture {
+    height: 390px;
+  }
+  .section_margin {
+    margin-top: unset;
+    margin-bottom: unset;
   }
   .main-header__navbar {
     box-shadow: 0 4px 12px -1px grey;
