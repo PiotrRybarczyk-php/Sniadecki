@@ -497,7 +497,7 @@ p.line_product {
   align-items: flex-end;
   background: linear-gradient(
     0deg,
-    rgba(21, 43, 112, 1) 0%,
+    rgba(21, 43, 112, 0.6) 0%,
     rgba(21, 43, 112, 0) 50%,
     rgba(36, 60, 135, 0) 100%
   );
