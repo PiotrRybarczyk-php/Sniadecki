@@ -70,7 +70,7 @@
       <div class="row" style="width:100%;min-height:120px;align-items:center;">
         <div class="col-lg-3 col-12">
           <div class="row">
-            <a class="brand" href="<?= base_url(); ?>"><img class="nav_logo" src="<?= base_url('uploads/') . $logo[0]->photo; ?>" alt="logo Sniadecki"></a>
+            <a class="brand" href="<?= base_url(); ?>"><img class="nav_logo lazy" data-src="<?= base_url('uploads/') . $logo[0]->photo; ?>" alt="logo Sniadecki"></a>
             <div class="toggler_box">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

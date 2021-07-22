@@ -51,28 +51,28 @@
 <div class="box_center main_padding mb-3">
     <div class="grid-4 gtab-2 gmob-1">
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $products_page[0]->photo; ?>);">
+            <div class="offer_box lazy" data-bg="url(<?= base_url('uploads/') . $products_page[0]->photo; ?>)">
                 <a href="produkt/<?= $products_page[0]->product_id; ?>/<?= slug($products_page[0]->title); ?>" class="offer_block">
                     <p class="title_product_2"><?= $products_page[0]->title; ?></p>
                 </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $products_page[1]->photo; ?>);">
+            <div class="offer_box lazy" data-bg="url(<?= base_url('uploads/') . $products_page[1]->photo; ?>)">
                 <a href="produkt/<?= $products_page[1]->product_id; ?>/<?= slug($products_page[1]->title); ?>" class="offer_block">
                     <p class="title_product_2"><?= $products_page[1]->title; ?></p>
                 </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $products_page[2]->photo; ?>);">
+            <div class="offer_box lazy" data-bg="url(<?= base_url('uploads/') . $products_page[2]->photo; ?>)">
                 <a href="produkt/<?= $products_page[2]->product_id; ?>/<?= slug($products_page[2]->title); ?>" class="offer_block">
                     <p class="title_product_2"><?= $products_page[2]->title; ?></p>
                 </a>
             </div>
         </div>
         <div class="item_container small_padding mob_space">
-            <div class="offer_box" style="background-image:url(<?= base_url('uploads/') . $products_page[3]->photo; ?>);">
+            <div class="offer_box lazy" data-bg="url(<?= base_url('uploads/') . $products_page[3]->photo; ?>)">
                 <a href="produkt/<?= $products_page[3]->product_id; ?>/<?= slug($products_page[3]->title); ?>" class="offer_block">
                     <p class="title_product_2"><?= $products_page[3]->title; ?></p>
                 </a>
@@ -94,7 +94,7 @@
             <?= textlim($info_1->description, 1506); ?>
         </div>
         <div class="item_container_center small_padding size-2 mob_size-1">
-            <div class="info_picture" style="background-image:url(<?= base_url('uploads/') . $info_1->photo; ?>);">
+            <div class="info_picture lazy" data-bg="url(<?= base_url('uploads/') . $info_1->photo; ?>)">
                 <div class="img_overlay"></div>
             </div>
         </div>
@@ -164,7 +164,7 @@
         </div>
         <div class="item_container_center size-2 tab_size-1 small_padding ">
             <div style="position:relative;">
-                <img class="img_get_medium" src="<?= base_url('uploads/') . $info_2->photo; ?>">
+                <img class="img_get_medium lazy" data-src="<?= base_url('uploads/') . $info_2->photo; ?>">
                 <div class="img_cover"></div>
             </div>
         </div>
@@ -214,7 +214,7 @@
     <div class="grid-2 gtab-1 ">
         <div class="item_container_center flex_right_mob">
             <div style="position:relative;">
-                <img class="img_get_medium" src="<?= base_url('uploads/') . $info_4->photo; ?>">
+                <img class="img_get_medium lazy" data-src="<?= base_url('uploads/') . $info_4->photo; ?>">
                 <div class="img_overlay"></div>
             </div>
         </div>
