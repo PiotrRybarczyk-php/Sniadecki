@@ -29,8 +29,12 @@ p.card_name {
   margin-bottom: 0px;
 }
 
+.navbar {
+  margin-bottom: 50px;
+}
+
 .main-header__navbar {
-  box-shadow: none;
+  box-shadow: 0px 10px 13px -15px #000000;
 }
 
 .section_margin {
@@ -549,7 +553,7 @@ p.line_product {
   width: 80%;
 }
 .foot_logo {
-  width: 23vw;
+  width: 20vw;
 }
 .navbar-brand {
   width: 100%;
@@ -1271,9 +1275,6 @@ p.contact_info {
     margin-top: unset;
     margin-bottom: unset;
   }
-  .main-header__navbar {
-    box-shadow: 0 4px 12px -1px grey;
-  }
   .sep_top-custom {
     padding-top: 70px;
   }
@@ -1412,7 +1413,7 @@ p.contact_info {
     width: 30%;
   }
   .foot_logo {
-    width: 86vw;
+    width: 84vw;
   }
   .product_padding {
     padding-left: 8px;
