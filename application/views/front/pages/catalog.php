@@ -14,7 +14,7 @@
         </div>
         <div class="item_container large_padding size-2 mob_size-1">
             <img class="img_get_small" src="<?= base_url('uploads/') . $subpages[1]->photo; ?>">
-            <div class="pt-2"><a class="blank" href="<?= base_url('uploads/2021-07-07/test.pdf') ?>"><button class="btn_JS">Pobierz Katalog</button></a></div>
+            <div class="pt-2"><a class="blank" href="<?= base_url('uploads/') . $catalog->file_path . $catalog->name; ?>"><button class="btn_JS">Pobierz Katalog</button></a></div>
         </div>
     </div>
 </div>

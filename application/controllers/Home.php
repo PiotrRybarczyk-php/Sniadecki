@@ -42,6 +42,7 @@ class Home extends CI_Controller
 	{
 		$data = loadDefaultDataFront();
 		$data['logo'] = $this->back_m->get_all('logos');
+		$data['catalog'] = $this->back_m->get_one('catalog', 1);
 		echo loadViewsFront('catalog', $data);
 	}
 	public function blog()

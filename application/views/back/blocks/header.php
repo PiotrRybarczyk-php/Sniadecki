@@ -111,6 +111,15 @@
                                                                                                         echo 'active';
                                                                                                       } ?>">Certyfikaty Archiwalne</a></li>
     </ul>
+    <a href="<?php echo base_url(); ?>panel/catalog" class="br-menu-link
+        <?php if ($this->uri->segment(2) == 'catalog') {
+          echo 'active';
+        } ?>">
+      <div class="br-menu-item">
+        <i class="menu-item-icon icon fas fa-folder-open tx-20"></i>
+        <span class="menu-item-label">Katalog</span>
+      </div><!-- menu-item -->
+    </a><!-- br-menu-link -->
     <a href="<?php echo base_url(); ?>panel/distribs" class="br-menu-link
         <?php if ($this->uri->segment(2) == 'distribs') {
           echo 'active';
