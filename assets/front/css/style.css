@@ -1084,6 +1084,10 @@ p.contact_info {
     padding-top: 30px;
   }
 
+  .banner_title {
+    font-size: 6vw;
+  }
+
   .product_picture_2 {
     max-width: 375px;
     margin-bottom: 8px;
@@ -1386,12 +1390,6 @@ p.contact_info {
     font-size: 16px;
     word-break: normal;
   }
-  .banner_title {
-    font-size: 62px;
-    font-weight: 700;
-    font-style: normal;
-    text-align: center;
-  }
   p.contact_info {
     line-height: 20px;
   }
@@ -1406,7 +1404,7 @@ p.contact_info {
     height: 15vw;
   }
   .banner_title {
-    font-size: 15vw;
+    font-size: 8vw;
     font-weight: 600;
   }
   .nav_pic {
@@ -1445,9 +1443,5 @@ p.contact_info {
   }
   p.contact_info {
     line-height: 22px;
-  }
-  .banner_title {
-    font-size: 50px;
-    font-weight: 500;
   }
 }

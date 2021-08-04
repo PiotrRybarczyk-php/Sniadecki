@@ -22,7 +22,7 @@
                 $class = 'picture_bor_y';
             } ?>
             <div class="box_flex flex_center sep_bot-xl mob_size-2">
-                <div class="offer_picture <?= $class; ?>" style="background-image:url(<?= base_url('uploads/') . $element->photo; ?>);"></div>
+                <a href="<?= base_url('produkt/') . $element->id . '/' . slug($element->title); ?>" class="offer_picture <?= $class; ?>" style="background-image:url(<?= base_url('uploads/') . $element->photo; ?>);"></a>
             </div>
             <div class="item_container product_padding size-2 sep_bot-xl">
                 <div class="box_flex sep_bot-l">
