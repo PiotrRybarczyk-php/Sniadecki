@@ -11,7 +11,20 @@ var ms = 10; // timer interval value
 var min_speed = 0.4; //minimum speed of animation
 var mul_speed = 1.4; //animation speed multiplier
 
+function set_size() {
+    if (window.screen.width > 1024) {
+        var body = document.getElementById('body');
+        var h = body.getBoundingClientRect().height;
+        var m = (h * 1.0) / 0.80;
+        var value = Math.round(-1 * (m - h));
+        var text = value.toString() + "px";
+        body.style.marginBottom = text;
+    }
+
+}
+
 window.onload = function () {
+    set_size();
     //get all elements to be animated
     element = document.querySelectorAll(".qa_fade, .qa_fade-right, .qa_fade-left, .qa_fade-down, .qa_fade-up");
     //get all needed data 

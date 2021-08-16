@@ -20,9 +20,13 @@
     transform: translateY(0);
     transition: all 0.3s ease-in-out;
   }
+
+  .cc-animate.cc-revoke.cc-bottom {
+    transform: unset !important;
+  }
 </style>
 
-<body>
+<body id="body">
   <script type="text/javascript">
     function changeLang(lang) {
       $.ajax({

@@ -7,6 +7,9 @@ body {
   overflow-x: hidden;
   padding-left: 6vw;
   padding-right: 6vw;
+  transform: scale(0.80);
+  transform-origin: 50% 0;
+
 }
 :root {
   --c2: 50%;
@@ -1239,6 +1242,11 @@ p.contact_info {
     margin-top: unset !important;
     margin-bottom: unset !important;
   }
+  body{
+    transform: none
+  }
+
+
 }
 
 @media (max-width: 991px) {
