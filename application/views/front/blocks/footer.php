@@ -8,7 +8,7 @@
         <p class="text_footer"><?= $contact->zip_code . ' ' . $contact->city; ?></p>
         <p class="text_footer"><?= $contact->address; ?></p>
         <p></p>
-        <p class="text_footer">tel.: <a class="link" href="tel:<?= $contact->phone1; ?>"><?= $contact->phone1; ?></a></p>
+        <p class="text_footer">tel.: <a class="link" href="tel:<?= $contact->phone1; ?>"><?= $contact->phone1; ?></a> / <a class="link" href="tel:<?= $contact->phone2; ?>"><?= $contact->phone2; ?></a></p>
       </div>
       <div class="grid-1 size-4 tab_size-2">
         <p class="text_footer" style="font-weight:700;">Ważne Informacje</p>

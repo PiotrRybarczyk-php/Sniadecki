@@ -21,8 +21,8 @@
     </div>
     <div class="grid-5 gtab-1">
         <div class="item_container size-3 tab_size-1 text_base simple_text">
-            <div class="item_container_center pt-2"><a class="blank" href="<?= base_url('certyfikaty_aktualne') ?>"><button class="btn_JS" style="width:337px;padding: 23px 25px 23px 25px;">Certyfikaty Aktualne</button></a></div>
-            <div class="item_container_center pt-2"><a class="blank" href="<?= base_url('certyfikaty_archiwalne') ?>"><button class="btn_JS" style="width:337px;padding: 23px 25px 23px 25px;">Certyfikaty Archiwalne</button></a></div>
+            <div class="item_container_center pt-2"><a class="blank" href="<?= base_url('certyfikaty_aktualne') ?>"><button class="btn_JS" style="width:337px;padding: 23px 25px 23px 25px;">Aktualne</button></a></div>
+            <div class="item_container_center pt-2"><a class="blank" href="<?= base_url('certyfikaty_archiwalne') ?>"><button class="btn_JS" style="width:337px;padding: 23px 25px 23px 25px;">Archiwalne</button></a></div>
         </div>
         <div class="item_container size-2 tab_size-1">
 
