@@ -2,7 +2,7 @@ Options -Indexes
 <IfModule mod_headers.c>
 Header always set X-Content-Type-Options "nosniff"
 Header always set X-XSS-Protection "1; mode=block"
-Header always set X-Frame-Options "deny"
+
 #deny kiedy nie używamy treści w iframeach z innych stron
 </IfModule>
 <IfModule mod_rewrite.c>
