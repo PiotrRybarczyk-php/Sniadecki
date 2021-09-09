@@ -1,3 +1,4 @@
+</main>
 <div class="item_container main_padding mt-3"><img class="foot_logo" src="<?= base_url('uploads/') . $logo[0]->photo; ?>" alt="logo Sniadecki"></div>
 <footer id="footer" class="main-footer pt-5 pb-0" style="overflow:hidden;background-color: #2e3972;">
   <div class="item_container main_padding">
@@ -39,7 +40,6 @@
   </div>
 </footer>
 
-</main>
 <?php //$define_captcha = "6LcEAPUaAAAAALF4L9uVvZeF6MvOs8KKKv8uXgvU" 
 ?>
 

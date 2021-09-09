@@ -26,7 +26,7 @@
   }
 </style>
 
-<body id="body">
+<body>
   <script type="text/javascript">
     function changeLang(lang) {
       $.ajax({
@@ -106,4 +106,4 @@
     <?php endif; ?>
   </header>
   <div class="mobile_nav_space"></div>
-  <main>
+  <main id="body">
