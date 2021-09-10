@@ -1,6 +1,6 @@
 </main>
-<div class="item_container main_padding mt-3"><img class="foot_logo" src="<?= base_url('uploads/') . $logo[0]->photo; ?>" alt="logo Sniadecki"></div>
-<footer id="footer" class="main-footer pt-5 pb-0" style="overflow:hidden;background-color: #2e3972;">
+<footer id="footer" class="main-footer pb-0" style="overflow:hidden;background-color: #2e3972;">
+  <div class="item_container main_padding mb-5 mt-2"><img class="foot_logo" src="<?= base_url('assets/front/img/') . 'sniadecki_white.png'; ?>" alt="logo Sniadecki"></div>
   <div class="item_container main_padding">
     <div class="grid-12 small_padding gtab-4">
       <div class="grid-1 size-5 tab_size-2">
