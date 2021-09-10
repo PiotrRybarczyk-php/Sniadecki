@@ -83,7 +83,7 @@
           </div>
         </div>
         <div class="col-lg-7 col-12">
-          <div class="collapse navbar-collapse" style="min-height: inherit;align-items:flex-end;" id="navbarNav">
+          <div class="collapse navbar-collapse" style="min-height: inherit;align-items:flex-end;justify-content:center;" id="navbarNav">
             <ul class="navbar-nav">
               <?php for ($key = 0; $key < 4; $key++) :  $current = $subpages[$key]->page; ?>
                 <li class="main-header__nav-item nav-item page_list">

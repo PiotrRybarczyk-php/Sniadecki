@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:100,200,300,400,400i,500,700" async>
   <link href="<?= assets() ?>css/bootstrap.min.css" rel="stylesheet" async>
   <link href="<?= assets() ?>css/mdb.min.css" rel="stylesheet" async>
-  <link href="<?= assets() ?>css/style.css" rel="stylesheet" async>
+  <link href="<?= assets() ?>css/style.css?v=1.1" rel="stylesheet" async>
   <link href="<?= assets() ?>css/qanim.css" rel="stylesheet" async>
   <!-- 
   <link href="<?= assets() ?>css/blocks/header-style.css" rel="stylesheet">
