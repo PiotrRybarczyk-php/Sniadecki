@@ -1246,6 +1246,9 @@ p.contact_info {
   main{
     transform: none
   }
+  .header_font{
+    font-size: 4vw;
+  }
 
 
 }
@@ -1284,6 +1287,9 @@ p.contact_info {
   .carousel {
     height: 525px;
   }
+  .header_font{
+    font-size: 7vw;
+  }
   .info_picture {
     height: 390px;
   }
@@ -1311,9 +1317,6 @@ p.contact_info {
   }
   .btn_JS {
     font-size: 3.5vw;
-  }
-  .header_font {
-    font-size: 48px;
   }
   .subheader_font {
     font-size: 21px;

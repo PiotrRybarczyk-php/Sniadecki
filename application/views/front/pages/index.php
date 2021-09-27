@@ -7,7 +7,7 @@
                 <div class="silder_img" style="background-image:url(<?= images() . $slide->photo; ?>);">
                     <div class="forward_content inner_padding">
                         <div class="grid-5 gtab-2 gmob-1">
-                            <div class="item_container size-2">
+                            <div class="item_container size-3">
                                 <div class="myrow header_space">
                                     <h1 class="header_font"><?= $slide->title; ?></h1>
                                 </div>
