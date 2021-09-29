@@ -855,9 +855,9 @@ a.blank {
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
-    rgba(21, 43, 112, 1) 0%,
+    rgba(21, 43, 92, 0.8) 0%,
     rgba(21, 43, 112, 0) 50%,
-    rgba(21, 43, 112, 1) 100%
+    rgba(21, 43, 92, 0.8) 100%
   );
 }
 .contact_title {

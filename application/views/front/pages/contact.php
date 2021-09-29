@@ -147,10 +147,16 @@ foreach ($contacts as $item) {
 <div class="box_normal main_padding">
     <div class="grid-3 gtab-2" style="align-items:center;">
         <div class="item_container small_padding tab_size-2">
-            <p class="contact_info" style="font-weight:600;"><?= $contact->company; ?></p>
+            <p class="contact_info" style="font-weight:600;white_space:nowrap;"><?= $contact->company; ?></p>
             <p class="contact_info"><?= $contact->zip_code . ' ' . $contact->city . ', ' . $contact->address; ?></p>
             <br>
             <p class="contact_info">Kontakt:</p>
+            <br>
+            <p class="contact_info" style="font-weight:600;">Dział Handlowy/Biuro</p>
+            <p class="contact_info">tel. 56 66 440 75, 56 66 440 69</p>
+            <p class="contact_info">Fax/tel. 56 6644077</p>
+            <p class="contact_info">biuro@sniadecki.torun.pl</p>
+            <p class="contact_info"><a href="http://sniadecki.torun.pl/wp321/">www.sniadecki.torun.pl</a></p>
             <br>
             <p class="contact_info" style="font-weight:600;">Magdalena Weznerowicz</p>
             <p class="contact_info">tel. <?= $contact->phone1 ?></p>
@@ -159,12 +165,6 @@ foreach ($contacts as $item) {
             <p class="contact_info" style="font-weight:600;">Ariel Agaciński</p>
             <p class="contact_info">tel. <?= $contact->phone2 ?></p>
             <p class="contact_info"><?= $contact->email2 ?></p>
-            <br>
-            <p class="contact_info" style="font-weight:600;">Dział Handlowy</p>
-            <p class="contact_info">tel. 56 6644075, 56 6644069</p>
-            <p class="contact_info">Fax/tel. 56 6644077</p>
-            <p class="contact_info">e-mail: biuro@sniadecki.torun.pl</p>
-            <p class="contact_info">www.sniadecki.torun.pl</p>
 
 
         </div>
